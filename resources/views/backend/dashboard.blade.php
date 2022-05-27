@@ -32,8 +32,8 @@
         <i class="ion ion-android-people  tx-60 lh-0 tx-white op-7"></i>
         <div class="mg-l-20">
           <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Brands</p>
-          <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">            
-            {{ App\Models\Brand::count() }}
+          <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">
+
           </p>
         </div>
       </div>
@@ -46,8 +46,8 @@
         <i class="ion ion-android-people  tx-60 lh-0 tx-white op-7"></i>
         <div class="mg-l-20">
           <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Products</p>
-          <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">            
-            {{ App\Models\Product::count() }}
+          <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">
+
           </p>
         </div>
       </div>
@@ -60,8 +60,8 @@
         <i class="ion ion-android-list tx-60 lh-0 tx-white op-7"></i>
         <div class="mg-l-20">
           <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Orders</p>
-          <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">            
-            {{ App\Models\Order::count() }}
+          <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">
+
           </p>
         </div>
       </div>

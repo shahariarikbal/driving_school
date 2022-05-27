@@ -5,19 +5,14 @@
     <meta charset="utf-8">
     <link rel="icon" href="{{ asset('backend/images/icon_short.png') }}" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <title>Bill Patente | Admin</title>
-
     <!-- vendor css -->
     <link href="{{ asset('backend/lib/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/toastr.min.css') }}" rel="stylesheet">
-
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="{{ asset('backend/css/bracket.css') }}">
   </head>
-
   <body>
 
     <div class="row no-gutters flex-row-reverse ht-100v">

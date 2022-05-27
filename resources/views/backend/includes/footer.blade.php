@@ -1,7 +1,7 @@
 <footer class="br-footer">
   <div class="footer-left">
 
-    <div class="mg-b-2">Copyright &copy; {{ date('Y') }}. <a href="" target="_blank">Divinlook</a>. All Rights Reserved.</div>
+    <div class="mg-b-2">Copyright &copy; {{ date('Y') }}. <a href="" target="_blank">Bill Patente</a>. All Rights Reserved.</div>
     <div>Design & developed by <a href="http://eureka-bd.com/" target="_blank">Eureka-BD</a>.</div>
   </div>
   <div class="footer-right d-flex align-items-center">

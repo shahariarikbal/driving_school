@@ -1,6 +1,6 @@
 
     <div class="br-logo"><a href="{{ url('admin/dashboard') }}">
-      <img src="{{ asset('/frontend/') }}/assets/images/logo-side.png" alt="img" style="">
+      <img src="{{ asset('/frontend/') }}/assets/img/logo.png" alt="img" style="height: 55px;">
       {{-- <span>[</span><i>DivineLook</i><span>]</span>BD</a> --}}
     </div>
     <div class="br-sideleft sideleft-scrollbar">
@@ -31,22 +31,21 @@
         </li>
 
 
-        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Products</label>
+        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Question</label>
 
           {{-- category --}}
           <li class="br-menu-item">
-            <a href="#" class="br-menu-link with-sub {{ Request::is('admin/category*') ? 'show-sub' : ''}}">
+            <a href="#" class="br-menu-link with-sub {{ Request::is('admin/topic*') ? 'show-sub' : ''}}">
               <i class="menu-item-icon icon ion-pound tx-24"></i>
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
-              <span class="menu-item-label">Category</span>
+              <span class="menu-item-label">Topic</span>
             </a><!-- br-menu-link -->
             <ul class="br-menu-sub" style="{{ Request::is('admin/category*') ? 'display: block;' : 'display: none;'}}">
-
               <li class="sub-item">
-                <a href="{{ url('admin/category/index') }}" class="sub-link {{ Request::is('admin/category/index') ? 'active' : ''}}">Manage</a>
+                <a href="{{ url('admin/topic/index') }}" class="sub-link {{ Request::is('admin/topic/index') ? 'active' : ''}}">Manage</a>
               </li>
               <li class="sub-item">
-                <a href="{{ url('admin/category/create') }}" class="sub-link {{ Request::is('admin/category/create') ? 'active' : ''}}">Add</a>
+                <a href="{{ url('admin/topic/create') }}" class="sub-link {{ Request::is('admin/topic/create') ? 'active' : ''}}">Add</a>
               </li>
             </ul>
           </li>
@@ -56,7 +55,7 @@
             <a href="#" class="br-menu-link with-sub {{ Request::is('admin/brand*') ? 'show-sub' : ''}}">
               <i class="menu-item-icon icon ion-star tx-24"></i>
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
-              <span class="menu-item-label">Brand</span>
+              <span class="menu-item-label">Question</span>
             </a><!-- br-menu-link -->
             <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
 
@@ -73,7 +72,7 @@
             <a href="#" class="br-menu-link with-sub {{ Request::is('admin/product*') ? 'show-sub' : ''}}">
               <i class="menu-item-icon icon ion-tshirt-outline tx-24"></i>
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
-              <span class="menu-item-label">Product</span>
+              <span class="menu-item-label">Post</span>
             </a><!-- br-menu-link -->
             <ul class="br-menu-sub" style="{{ Request::is('admin/product*') ? 'display: block;' : 'display: none;'}}">
 
@@ -88,13 +87,13 @@
 
 
 
-          <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Orders</label>
+          <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Others</label>
 
           <li class="br-menu-item">
               <a href="#" class="br-menu-link with-sub {{ Request::is('admin/order*') ? 'show-sub' : ''}}">
                   <i class="menu-item-icon icon ion-ios-cart-outline tx-24"></i>
                   {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
-                  <span class="menu-item-label">Order</span>
+                  <span class="menu-item-label">Faq</span>
               </a><!-- br-menu-link -->
               <ul class="br-menu-sub" style="{{ Request::is('admin/order*') ? 'display: block;' : 'display: none;'}}">
 
@@ -108,7 +107,7 @@
               <a href="#" class="br-menu-link with-sub {{ Request::is('admin/stock*') ? 'show-sub' : ''}}">
                   <i class="menu-item-icon icon ion-ios-cart-outline tx-24"></i>
                   {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
-                  <span class="menu-item-label">Stock</span>
+                  <span class="menu-item-label">Video</span>
               </a><!-- br-menu-link -->
               <ul class="br-menu-sub" style="{{ Request::is('admin/order*') ? 'display: block;' : 'display: none;'}}">
 
