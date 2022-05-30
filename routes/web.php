@@ -12,23 +12,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'frontend.home.index');
+
+
+Route::get('/lessons', 'Frontend\FrontendController@lessons');
 
 Route::group(['prefix' => 'admin'], function (){
-    Route::get('/login', 'Admin\AdminController@adminLoginForm');
-    Route::post('/login', 'Admin\AdminController@adminLogin');
+    Route::get('/login', 'Backend\AdminController@adminLoginForm');
+    Route::post('/login', 'Backend\AdminController@adminLogin');
     Route::group(['middleware' => 'admin'], function (){
-        Route::get('/dashboard', 'Admin\AdminController@adminDashboard');
-        Route::post('/logout', 'Admin\AdminController@logout');
+        Route::get('/dashboard', 'Backend\AdminController@adminDashboard');
+        Route::post('/logout', 'Backend\AdminController@logout');
 
         //============ Topic manage ===============//
-        Route::get('/topic/index', 'Admin\TopicController@index');
-        Route::get('/topic/create', 'Admin\TopicController@create');
-        Route::post('/topic/store', 'Admin\TopicController@store');
-        Route::get('/topic/edit/{topic}', 'Admin\TopicController@edit');
-        Route::post('/topic/update/{topic}', 'Admin\TopicController@update');
-        Route::get('/topic/delete/{topic}', 'Admin\TopicController@destroy');
+        Route::get('/topic/index', 'Backend\TopicController@index');
+        Route::get('/topic/create', 'Backend\TopicController@create');
+        Route::post('/topic/store', 'Backend\TopicController@store');
+        Route::get('/topic/edit/{topic}', 'Backend\TopicController@edit');
+        Route::post('/topic/update/{topic}', 'Backend\TopicController@update');
+        Route::get('/topic/delete/{topic}', 'Backend\TopicController@destroy');
     });
 });
