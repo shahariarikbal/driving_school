@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from templates.hibootstrap.com/dizu/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 11:21:57 GMT -->
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="assets/css/remixicon.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/odometer.css">
+<link rel="stylesheet" href="assets/css/fancybox.css">
+<link rel="stylesheet" href="assets/css/aos.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/dark-theme.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<title>Dizu - Driving School HTML Template</title>
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+<body>
+
+<div class="loader js-preloader">
+<svg class="car" width="102" height="40" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(2 1)" stroke="#091851" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+<path class="car__body" d="M47.293 2.375C52.927.792 54.017.805 54.017.805c2.613-.445 6.838-.337 9.42.237l8.381 1.863c2.59.576 6.164 2.606 7.98 4.531l6.348 6.732 6.245 1.877c3.098.508 5.609 3.431 5.609 6.507v4.206c0 .29-2.536 4.189-5.687 4.189H36.808c-2.655 0-4.34-2.1-3.688-4.67 0 0 3.71-19.944 14.173-23.902zM36.5 15.5h54.01" stroke-width="2" />
+<ellipse class="car__wheel--left" stroke-width="2.2" fill="#FFF" cx="83.493" cy="30.25" rx="6.922" ry="6.808" />
+<ellipse class="car__wheel--right" stroke-width="2.2" fill="#FFF" cx="46.511" cy="30.25" rx="6.922" ry="6.808" />
+<path class="car__line car__line--top" d="M22.5 16.5H2.475" stroke-width="2" />
+<path class="car__line car__line--middle" d="M20.5 23.5H.4755" stroke-width="2" />
+<path class="car__line car__line--bottom" d="M25.5 9.5h-19" stroke-width="2" />
+</g>
+</svg>
+</div>
+
+
+<div class="switch-theme-mode">
+<label id="switch" class="switch">
+<input type="checkbox" onchange="toggleTheme()" id="slider">
+<span class="slider round"></span>
+</label>
+</div>
+
+
+<div class="page-wrapper">
+
+<header class="header-wrap style1">
+<div class="header-top">
+<button type="button" class="close-sidebar">
+<i class="ri-close-fill"></i>
+</button>
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<div class="header-top-left">
+<ul class="contact-info list-style">
+<li><i class="flaticon-call"></i> <a href="tel:02459271449">(+024) 592 71 449</a></li>
+<li><i class="flaticon-envelope"></i> <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#533b363f3f3c13373a29267d303c3e"><span class="__cf_email__" data-cfemail="c2aaa7aeaead82a6abb8b7eca1adaf">[email&#160;protected]</span></a></li>
+<li><i class="flaticon-location-1"></i><p>St. Here Mandalay, New York, U.K</p></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="header-top-right">
+<ul class="social-profile list-style style2">
+ <li>
+<a target="_blank" href="https://facebook.com/">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://pinterest.com/">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+<div class="select-lang">
+<i class="ri-global-line"></i>
+<div class="navbar-option-item navbar-language dropdown language-option">
+<button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-name"></span>
+</button>
+<div class="dropdown-menu language-dropdown-menu">
+<a class="dropdown-item" href="#">
+<img src="assets/img/uk.png" alt="flag">
+English
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/img/china.png" alt="flag">
+简体中文
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/img/uae.png" alt="flag">
+العربيّة
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="header-bottom">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="index.html">
+<img src="assets/img/logo.png" alt="logo">
+</a>
+<div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
+<div class="menu-close xl-none">
+<a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
+</div>
+<ul class="navbar-nav ms-auto">
+<li class="nav-item  has-dropdown">
+<a href="#" class="nav-link active">
+ Home
+<i class="ri-arrow-down-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="index.html" class="nav-link">Home One</a>
+</li>
+<li class="nav-item">
+<a href="index-2.html" class="nav-link active">Home Two</a>
+</li>
+<li class="nav-item">
+<a href="index-3.html" class="nav-link">Home Three</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="about.html" class="nav-link">
+About Us
+</a>
+</li>
+<li class="nav-item has-dropdown">
+<a href="#" class="nav-link">
+Course
+<i class="ri-arrow-down-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="course-one.html" class="nav-link">Course One</a>
+</li>
+<li class="nav-item">
+<a href="course-two.html" class="nav-link">Course Two</a>
+</li>
+<li class="nav-item">
+<a href="course-details.html" class="nav-link">Course Details</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-dropdown">
+<a href="#" class="nav-link">
+Pages
+<i class="ri-arrow-down-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="#" class="nav-link">
+Vehicles
+<i class="ri-arrow-right-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="vehicles.html" class="nav-link">Our Vehicles</a>
+</li>
+<li class="nav-item">
+<a href="vehicle-details.html" class="nav-link">Single Vehicle</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="team.html" class="nav-link">Instructor</a>
+ </li>
+<li class="nav-item">
+<a href="team-details.html" class="nav-link">Instructor Details</a>
+</li>
+<li class="nav-item">
+<a href="pricing.html" class="nav-link">Pricing Plan</a>
+</li>
+<li class="nav-item">
+<a href="faq.html" class="nav-link">FAQ</a>
+</li>
+<li class="nav-item">
+<a href="testimonials.html" class="nav-link">Testimonials</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">
+User Pages
+<i class="ri-arrow-right-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="login.html" class="nav-link">Login</a>
+</li>
+<li class="nav-item">
+<a href="register.html" class="nav-link">Register</a>
+</li>
+<li class="nav-item">
+<a href="recover-password.html" class="nav-link">Recover Password</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="terms-of-service.html" class="nav-link">Terms of Service</a>
+</li>
+<li class="nav-item">
+<a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+</li>
+<li class="nav-item">
+<a href="error-404.html" class="nav-link">404 Error Page</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-dropdown">
+<a href="#" class="nav-link">
+Blog
+<i class="ri-arrow-down-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="#" class="nav-link">
+Blog Layout
+<i class="ri-arrow-right-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="blog-no-sidebar.html" class="nav-link">Blog Grid</a>
+</li>
+ <li class="nav-item">
+<a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a>
+</li>
+<li class="nav-item">
+<a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">
+Single Blog
+<i class="ri-arrow-right-s-fill"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="blog-details-no-sidebar.html" class="nav-link">Blog Details No Sidebar</a>
+</li>
+<li class="nav-item">
+<a href="blog-details-left-sidebar.html" class="nav-link">Blog Details Left Sidebar</a>
+</li>
+<li class="nav-item">
+<a href="blog-details-right-sidebar.html" class="nav-link">Blog Details Right Sidebar</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="contact.html" class="nav-link">Contact Us</a>
+</li>
+<li class="nav-item xl-none">
+<a href="course-one.html" class="btn style1">Get Started</a>
+</li>
+</ul>
+<div class="others-options  lg-none">
+<div class="option-item">
+<button class="searchbtn" type="button">
+<i class="flaticon-search"></i>
+</button>
+</div>
+<div class="header-btn">
+<a href="course-one.html" class="btn style1">Get Started</a>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-bar-wrap">
+<div class="mobile-sidebar">
+<i class="ri-menu-4-line"></i>
+</div>
+<button class="searchbtn xl-none" type="button">
+<i class="flaticon-search"></i>
+</button>
+<div class="mobile-menu xl-none">
+<a href="javascript:void(0)"><i class="ri-menu-line"></i></a>
+</div>
+</div>
+</div>
+<div class="search-area">
+<div class="container">
+<form action="#">
+<div class="form-group">
+ <input type="search" placeholder="Search Here" autofocus>
+</div>
+</form>
+<button type="button" class="close-searchbox">
+<i class="ri-close-line"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+
+
+<div class="hero-wrap style2">
+<div class="hero-slider-one owl-carousel">
+<div class="hero-slide-item hero-slide-1 bg-f">
+<div class="container">
+<div class="row">
+<div class="col-lg-7 col-md-10">
+<div class="hero-content" data-speed="0.10" data-revert="true">
+<h1>We Help You To Be An Expert Driver</h1>
+<p>Lorem ipsum dolor sit amet, consec tetur adipi sicing elit temporibus repel lendus quae quaerat inventore ipsam distinctio officiis unde assumenda minima qui obcaecati iustor praeses antium ametus quaerat lorem dolor.</p>
+<a href="about.html" class="btn style1">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hero-slide-item hero-slide-2 bg-f">
+<div class="container">
+<div class="row">
+<div class="col-lg-7 col-md-10">
+<div class="hero-content" data-speed="0.10" data-revert="true">
+<h1>Driving Safely Is Our Top Priority</h1>
+<p>Lorem ipsum dolor sit amet, consec tetur adipi sicing elit temporibus repel lendus quae quaerat inventore ipsam distinctio officiis unde assumenda minima qui obcaecati iustor praeses antium ametus quaerat lorem dolor.</p>
+<a href="about.html" class="btn style1">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hero-slide-item hero-slide-3 bg-f">
+<div class="container">
+<div class="row">
+<div class="col-lg-7 col-md-10">
+<div class="hero-content" data-speed="0.10" data-revert="true">
+<h1>We're The Most Reliable Driving School</h1>
+<p>Lorem ipsum dolor sit amet, consec tetur adipi sicing elit temporibus repel lendus quae quaerat inventore ipsam distinctio officiis unde assumenda minima qui obcaecati iustor praeses antium ametus quaerat lorem dolor.</p>
+<a href="about.html" class="btn style1">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="book-course-wrap style1">
+<div class="container">
+<div class="book-course-form">
+<h4>Start Your Driving Course</h4>
+<form action="#" class="booking-form">
+<div class="form-group">
+<label for="name">Your Name*</label>
+<input type="text" id="name" placeholder="Name" required>
+</div>
+<div class="form-group">
+<label for="email">Your Email*</label>
+<input type="email" id="email" placeholder="Email" required>
+</div>
+<div class="form-group">
+<label for="course-plan">Choose A Course</label>
+<select name="course-plan" id="course-plan">
+<option value="0">Select Course</option>
+<option value="1">Foreign Driving</option>
+<option value="2">Teen Driving</option>
+<option value="2">Pre-licensing Course</option>
+</select>
+</div>
+<div class="form-group">
+<label for="date">Date Booking*</label>
+<input type="date" id="date" required>
+</div>
+<div class="form-group">
+<button type="submit" class="btn style1 w-100 d-block">Book Now</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+
+<section class="about-wrap style2 ptb-100">
+<div class="container">
+<div class="row gx-5 align-items-center">
+<div class="col-lg-6">
+<div class="about-img-wrap">
+<div class="about-bg-2 bg-f"></div>
+<div class="about-promo-box">
+<h4>25 Year<span>Experience</span></h4>
+</div>
+<a class="play-video" data-fancybox href="https://www.youtube.com/watch?v=8PmM6SUn7Es">
+<span class="play-now icon"> <i class="flaticon-play-1"></i>
+<span class="ripple"></span></span>
+</a>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="about-content">
+<div class="content-title style1">
+<span>ABOUT US</span>
+<h2>We're Best Driving School In The Country</h2>
+<p>There are many variations of passages of Lorem Ipsum amet avoilble but majority have suffered alteration in some form, by injected humur or randomise words which don't sure amet sit dolor quras solo dolor.</p>
+</div>
+<div class="ceo-message">
+<p>"Lorem ipsum dolor sit amet consec tetur adiping slicing elit. Archite tempo ribus veniam placeat provident ipsam amet sit"</p>
+<h6>Adrian Salves, CEO &amp; Co-founder</h6>
+</div>
+<a href="about.html" class="btn style1">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="course-wrap pt-100 pb-75 bg-concrete">
+<div class="container">
+<div class="row">
+<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+<div class="section-title style1 text-center mb-40">
+<span>TRANDING COURSES</span>
+<h2>We Offer Best Driving Courses</h2>
+</div>
+</div>
+</div>
+<div class="course-slider-one owl-carousel">
+<div class="course-card style2">
+<div class="course-img">
+<img src="assets/img/courses/course-4.jpg" alt="Image">
+</div>
+<div class="course-info">
+<ul class="course-metainfo list-style">
+<li><i class="flaticon-graph"></i>Advance</li>
+<li><i class="flaticon-clock"></i>8 Week</li>
+</ul>
+<h3><a href="course-details.html">Highway Driving</a></h3>
+<p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
+<div class="course-author-wrap">
+<div class="course-author">
+<span class="course-author-img">
+<img src="assets/img/team/instructor-4.jpg" alt="Image">
+</span>
+<a href="team-details.html">Roger Federar</a>
+</div>
+<p class="course-price">$75</p>
+</div>
+<a class="btn style2" href="course-details.html">
+Read More <i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+<div class="course-card style2">
+<div class="course-img">
+<img src="assets/img/courses/course-5.jpg" alt="Image">
+</div>
+<div class="course-info">
+<ul class="course-metainfo list-style">
+<li><i class="flaticon-graph"></i>Advance</li>
+<li><i class="flaticon-clock"></i>3 Week</li>
+</ul>
+<h3><a href="course-details.html">Pre-Licensing Course</a></h3>
+<p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
+<div class="course-author-wrap">
+<div class="course-author">
+<span class="course-author-img">
+<img src="assets/img/team/instructor-5.jpg" alt="Image">
+</span>
+<a href="team-details.html">Jay Watson</a>
+</div>
+<p class="course-price">$45</p>
+</div>
+<a class="btn style2" href="course-details.html">
+Read More <i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+<div class="course-card style2">
+<div class="course-img">
+<img src="assets/img/courses/course-6.jpg" alt="Image">
+</div>
+<div class="course-info">
+<ul class="course-metainfo list-style">
+<li><i class="flaticon-graph"></i>Beginner</li>
+<li><i class="flaticon-clock"></i>6 Week</li>
+ </ul>
+<h3><a href="course-details.html">Teen Driving Course</a></h3>
+<p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
+<div class="course-author-wrap">
+<div class="course-author">
+<span class="course-author-img">
+<img src="assets/img/team/instructor-6.jpg" alt="Image">
+</span>
+<a href="team-details.html">Tonu Stark</a>
+</div>
+<p class="course-price">$89</p>
+</div>
+<a class="btn style2" href="course-details.html">
+Read More <i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+<div class="course-card style2">
+<div class="course-img">
+<img src="assets/img/courses/course-1.jpg" alt="Image">
+</div>
+<div class="course-info">
+<ul class="course-metainfo list-style">
+<li><i class="flaticon-graph"></i>Advance</li>
+<li><i class="flaticon-clock"></i>6 Week</li>
+</ul>
+<h3><a href="course-details.html">International Driving</a></h3>
+<p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
+<div class="course-author-wrap">
+<div class="course-author">
+<span class="course-author-img">
+<img src="assets/img/team/instructor-1.jpg" alt="Image">
+</span>
+<a href="team-details.html">David Watt</a>
+</div>
+<p class="course-price">$55</p>
+</div>
+<a class="btn style2" href="course-details.html">
+Read More <i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+<div class="course-card style2">
+<div class="course-img">
+<img src="assets/img/courses/course-2.jpg" alt="Image">
+</div>
+<div class="course-info">
+<ul class="course-metainfo list-style">
+<li><i class="flaticon-graph"></i>Beginner</li>
+<li><i class="flaticon-clock"></i>4 Week</li>
+</ul>
+<h3><a href="course-details.html">Traffic Science</a></h3>
+<p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
+<div class="course-author-wrap">
+<div class="course-author">
+<span class="course-author-img">
+<img src="assets/img/team/instructor-2.jpg" alt="Image">
+</span>
+<a href="team-details.html">Liam Noah</a>
+</div>
+<p class="course-price">$80</p>
+ </div>
+<a class="btn style2" href="course-details.html">
+Read More <i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="why-choose-wrap style2 ptb-100">
+<div class="container">
+<div class="row gx-5 align-items-center">
+<div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+<div class="wh-content">
+<div class="content-title style1">
+<span>WHY CHOOSE US</span>
+<h2>An Experienced, Friendly &amp; Reliable Driving School</h2>
+<p>There are many variations of passages of Lorem Ipsum amet avoilble but majority have suffered alteration in some form, by injected humur or randomise words which don't sure amet sit dolor quras solo dolor.</p>
+</div>
+<div class="feature-item-wrap">
+<div class="feature-item style2">
+<div class="feature-icon">
+<i class="flaticon-driving-license"></i>
+</div>
+<div class="feature-text">
+<h3>Fully Licensed</h3>
+<p>Vestibulum ac diam sit amet quam vehicula elemen tum sed sit amet dui praesent sapien pellen tesque .</p>
+</div>
+</div>
+<div class="feature-item style2">
+<div class="feature-icon">
+<i class="flaticon-van"></i>
+</div>
+<div class="feature-text">
+<h3>Professional Wrapping</h3>
+<p>Vestibulum ac diam sit amet quam vehicula elemen tum sed sit amet dui praesent sapien pellen tesque.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+<div class="quote-form">
+<div class="quote-title">
+<h2>Request A Quote</h2>
+</div>
+<form action="#">
+<div class="form-group">
+<input type="text" placeholder="Your Name">
+</div>
+<div class="form-group">
+<input type="email" placeholder="Your Email">
+</div>
+<div class="form-group">
+<input type="text" placeholder="Your Subject">
+</div>
+<div class="form-group">
+<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
+</div>
+<div class="form-group">
+<button type="submit" class="btn style1">Submit Query</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="vehicle-wrap pt-100 pb-75 bg-concrete">
+<div class="container">
+<div class="content-title style1 text-center mb-40">
+<span>OUR VEHICLES</span>
+<h2>These Are Our Training Vehicles</h2>
+</div>
+<div class="vehicle-slider-one owl-carousel">
+<div class="vehicle-card style2">
+<div class="vehicle-img">
+<img src="assets/img/vehicles/vehicle-4.jpg" alt="Image">
+</div>
+<div class="vehicle-info">
+<h3><a href="vehicle-details.html">Refubrished Truck</a></h3>
+<p>Praesentium exercitationem ornare litorac thina distinctio iaculis modi ante </p>
+<div class="vehicle-meta-info">
+<div class="vehicle-promo-info">
+<div class="vehicle-promo-img">
+<img src="assets/img/vehicles/car-1.jpg" alt="Image">
+</div>
+<h6>Starts From <span>$85 - $120</span></h6>
+</div>
+<div class="vehicle-rating">
+<span>91 Ratings</span>
+<ul class="list-style ratings">
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+</ul>
+</div>
+</div>
+<a href="vehicle-details.html" class="btn style2">Read More<i class="flaticon-right-arrow-1"></i></a>
+</div>
+</div>
+<div class="vehicle-card style2">
+<div class="vehicle-img">
+<img src="assets/img/vehicles/vehicle-5.jpg" alt="Image">
+</div>
+<div class="vehicle-info">
+<h3><a href="vehicle-details.html">Mountain Bikes</a></h3>
+<p>Praesentium exercitationem ornare litorac thina distinctio iaculis modi ante </p>
+<div class="vehicle-meta-info">
+<div class="vehicle-promo-info">
+<div class="vehicle-promo-img">
+<img src="assets/img/vehicles/car-2.jpg" alt="Image">
+</div>
+<h6>Starts From <span>$45 - $80</span></h6>
+</div>
+<div class="vehicle-rating">
+<span>55 Ratings</span>
+<ul class="list-style ratings">
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+ <li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+</ul>
+</div>
+</div>
+<a href="vehicle-details.html" class="btn style2">Read More<i class="flaticon-right-arrow-1"></i></a>
+</div>
+</div>
+<div class="vehicle-card style2">
+<div class="vehicle-img">
+<img src="assets/img/vehicles/vehicle-1.jpg" alt="Image">
+</div>
+<div class="vehicle-info">
+<h3><a href="vehicle-details.html">4 Wheeler Cars</a></h3>
+<p>Praesentium exercitationem ornare litorac thina distinctio iaculis modi ante </p>
+<div class="vehicle-meta-info">
+<div class="vehicle-promo-info">
+<div class="vehicle-promo-img">
+<img src="assets/img/vehicles/car-3.jpg" alt="Image">
+</div>
+<h6>Starts From <span>$25 - $60</span></h6>
+</div>
+<div class="vehicle-rating">
+<span>101 Ratings</span>
+<ul class="list-style ratings">
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+</ul>
+</div>
+</div>
+<a href="vehicle-details.html" class="btn style2">Read More<i class="flaticon-right-arrow-1"></i></a>
+</div>
+</div>
+<div class="vehicle-card style2">
+<div class="vehicle-img">
+<img src="assets/img/vehicles/vehicle-2.jpg" alt="Image">
+</div>
+<div class="vehicle-info">
+<h3><a href="vehicle-details.html">Extra Large Truck</a></h3>
+<p>Praesentium exercitationem ornare litorac thina distinctio iaculis modi ante </p>
+<div class="vehicle-meta-info">
+<div class="vehicle-promo-info">
+<div class="vehicle-promo-img">
+<img src="assets/img/vehicles/car-4.jpg" alt="Image">
+</div>
+<h6>Starts From <span>$35 - $80</span></h6>
+</div>
+<div class="vehicle-rating">
+<span>86 Ratings</span>
+<ul class="list-style ratings">
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+ <li><i class="flaticon-star"></i></li>
+</ul>
+</div>
+</div>
+<a href="vehicle-details.html" class="btn style2">Read More<i class="flaticon-right-arrow-1"></i></a>
+</div>
+</div>
+<div class="vehicle-card style2">
+<div class="vehicle-img">
+<img src="assets/img/vehicles/vehicle-3.jpg" alt="Image">
+</div>
+<div class="vehicle-info">
+<h3><a href="vehicle-details.html">Motor Bikes &amp; Car</a></h3>
+<p>Praesentium exercitationem ornare litorac thina distinctio iaculis modi ante </p>
+<div class="vehicle-meta-info">
+<div class="vehicle-promo-info">
+<div class="vehicle-promo-img">
+<img src="assets/img/vehicles/car-5.jpg" alt="Image">
+</div>
+<h6>Starts From <span>$55 - $120</span></h6>
+</div>
+<div class="vehicle-rating">
+<span>80 Ratings</span>
+<ul class="list-style ratings">
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+<li><i class="flaticon-star"></i></li>
+</ul>
+</div>
+</div>
+<a href="vehicle-details.html" class="btn style2">Read More<i class="flaticon-right-arrow-1"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="cta-wrap style1 bg-downriver ptb-100">
+<div class="container">
+<div class="row align-items-center cta-text">
+<div class="col-lg-8 col-md-7">
+<div class="content-title">
+<h2 class="text-white">Start Learning To Drive Today</h2>
+</div>
+</div>
+<div class="col-lg-4 col-md-5 text-end">
+<a href="course-one.html" class="btn style1">Admission Course</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="team-wrap pt-100 pb-75">
+<div class="container">
+<div class="row">
+<div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
+<div class="section-title style1 text-center mb-40">
+<span>OUR TEAM</span>
+<h2>Our Professional Instructor</h2>
+</div>
+</div>
+</div>
+<div class="team-slider-one owl-carousel">
+<div class="team-card style2">
+<div class="team-img">
+<img src="assets/img/team/team-2.jpg" alt="Image">
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com/">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://pinterest.com/">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="team-info-wrap">
+<div class="team-info">
+<h3><a href="team-details.html">Mossie Ullrich</a></h3>
+<span>Driving Instructor</span>
+</div>
+<a href="team-details.html" class="team-link"><i class="flaticon-plus-symbol-button"></i></a>
+</div>
+<a href="team-details.html" class="btn style2">Read More <i class="flaticon-right-arrow"></i></a>
+</div>
+<div class="team-card style2">
+<div class="team-img">
+<img src="assets/img/team/team-3.jpg" alt="Image">
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com/">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://pinterest.com/">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="team-info-wrap">
+<div class="team-info">
+<h3><a href="team-details.html">Jackie Schmeler</a></h3>
+<span>Senior Instructor</span>
+</div>
+<a href="team-details.html" class="team-link"><i class="flaticon-plus-symbol-button"></i></a>
+</div>
+<a href="team-details.html" class="btn style2">Read More <i class="flaticon-right-arrow"></i></a> 
+</div>
+<div class="team-card style2">
+<div class="team-img">
+<img src="assets/img/team/team-4.jpg" alt="Image">
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com/">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://pinterest.com/">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="team-info-wrap">
+<div class="team-info">
+<h3><a href="team-details.html">Benett Watson</a></h3>
+<span>Defensive Instructor</span>
+</div>
+<a href="team-details.html" class="team-link"><i class="flaticon-plus-symbol-button"></i></a>
+</div>
+<a href="team-details.html" class="btn style2">Read More <i class="flaticon-right-arrow"></i></a>
+</div>
+<div class="team-card style2">
+<div class="team-img">
+<img src="assets/img/team/team-1.jpg" alt="Image">
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com/">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://pinterest.com/">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="team-info-wrap">
+<div class="team-info">
+<h3><a href="team-details.html">Erik Ondricka</a></h3>
+<span>Senior Instructor</span>
+</div>
+<a href="team-details.html" class="team-link"><i class="flaticon-plus-symbol-button"></i></a>
+</div>
+<a href="team-details.html" class="btn style2">Read More <i class="flaticon-right-arrow"></i></a>
+</div>
+<div class="team-card style2">
+<div class="team-img">
+<img src="assets/img/team/team-5.jpg" alt="Image">
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com/">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://pinterest.com/">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="team-info-wrap">
+<div class="team-info">
+<h3><a href="team-details.html">Savannah Ashley</a></h3>
+<span>Assistant Driver</span>
+</div>
+<a href="team-details.html" class="team-link"><i class="flaticon-plus-symbol-button"></i></a>
+</div>
+<a href="team-details.html" class="btn style2">Read More <i class="flaticon-right-arrow"></i></a>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="counter-area">
+<div class="container">
+<div class="counter-card-wrap">
+<div class="row">
+<div class="col-xl-3 col-lg-3 col-md-6 col-6">
+<div class="counter-card">
+<span class="counter-icon">
+<i class="flaticon-graduated"></i>
+</span>
+<div class="counter-text">
+<h2 class="counter-num">
+<span class="odometer" data-count="6500"></span>
+<span class="target">+</span>
+</h2>
+<p>Learn From Here</p>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-6">
+<div class="counter-card">
+<span class="counter-icon">
+<i class="flaticon-teacher"></i>
+</span>
+<div class="counter-text">
+<h2 class="counter-num">
+<span class="odometer" data-count="100"></span>
+<span class="target">+</span>
+</h2>
+<p>Top Instructors</p>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-6">
+<div class="counter-card">
+<span class="counter-icon">
+<i class="flaticon-reading"></i>
+</span>
+<div class="counter-text">
+<h2 class="counter-num">
+<span class="odometer" data-count="550"></span>
+<span class="target">+</span>
+</h2>
+<p>Current Student</p>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-6">
+<div class="counter-card">
+<span class="counter-icon">
+<i class="flaticon-car"></i>
+</span>
+<div class="counter-text">
+<h2 class="counter-num">
+<span class="odometer" data-count="940"></span>
+<span class="target">+</span>
+</h2>
+<p>Own Vehicles</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="testimonial-wrap ptb-100">
+<div class="container">
+<div class="section-title style1 text-center mb-40">
+<span>CLIENTS FEEDBACK POSTS</span>
+<h2>What Our Customer Says</h2>
+</div>
+<div class="testimonial-slider-two owl-carousel">
+<div class="testimonial-card style1">
+<p class="client-quote">
+Nunc quam arcu, pretium quis quam sed aoreet efficitur liuam volutpat. lobortis sem consequat consequat impe nulla viverraut loremut tetur diam nunc bibendum impea Lorem ipsum dolor sit amet, consec isicing elit.
+</p>
+<div class="client-info-wrap">
+<div class="client-img">
+<img src="assets/img/testimonials/client-1.jpg" alt="Image">
+</div>
+<div class="client-info">
+<h3>Hayleym Pheobe</h3>
+<span>Co-Founder, Olley Inc</span>
+</div>
+<div class="quote-icon">
+<i class="flaticon-quote"></i>
+</div>
+</div>
+</div>
+<div class="testimonial-card style1">
+<p class="client-quote">
+Nunc quam arcu, pretium quis quam sed aoreet efficitur liuam volutpat. lobortis sem consequat consequat impe nulla viverraut loremut tetur diam nunc bibendum impea Lorem ipsum dolor sit amet, consec isicing elit.
+</p>
+<div class="client-info-wrap">
+<div class="client-img">
+<img src="assets/img/testimonials/client-2.jpg" alt="Image">
+</div>
+<div class="client-info">
+<h3>Jim Morison</h3>
+<span>Enterpreneur</span>
+</div>
+<div class="quote-icon">
+<i class="flaticon-quote"></i>
+</div>
+</div>
+</div>
+<div class="testimonial-card style1">
+<p class="client-quote">
+Nunc quam arcu, pretium quis quam sed aoreet efficitur liuam volutpat. lobortis sem consequat consequat impe nulla viverraut loremut tetur diam nunc bibendum impea Lorem ipsum dolor sit amet, consec isicing elit.
+</p>
+<div class="client-info-wrap">
+<div class="client-img">
+<img src="assets/img/testimonials/client-3.jpg" alt="Image">
+</div>
+<div class="client-info">
+<h3>Alex Cruis</h3>
+<span>CEO, Brandix ltd</span>
+</div>
+<div class="quote-icon">
+<i class="flaticon-quote"></i>
+</div>
+</div>
+</div>
+<div class="testimonial-card style1">
+<p class="client-quote">
+Nunc quam arcu, pretium quis quam sed aoreet efficitur liuam volutpat. lobortis sem consequat consequat impe nulla viverraut loremut tetur diam nunc bibendum impea Lorem ipsum dolor sit amet, consec isicing elit.
+</p>
+<div class="client-info-wrap">
+<div class="client-img">
+<img src="assets/img/testimonials/client-4.jpg" alt="Image">
+</div>
+<div class="client-info">
+<h3>Harry Jackson</h3>
+<span>Founder, IBAC</span>
+</div>
+<div class="quote-icon">
+<i class="flaticon-quote"></i>
+</div>
+</div>
+</div>
+<div class="testimonial-card style1">
+<p class="client-quote">
+Nunc quam arcu, pretium quis quam sed aoreet efficitur liuam volutpat. lobortis sem consequat consequat impe nulla viverraut loremut tetur diam nunc bibendum impea Lorem ipsum dolor sit amet, consec isicing elit.
+</p>
+<div class="client-info-wrap">
+<div class="client-img">
+<img src="assets/img/testimonials/client-5.jpg" alt="Image">
+</div>
+<div class="client-info">
+<h3>Martina Haris</h3>
+<span>Enterpreneur</span>
+</div>
+<div class="quote-icon">
+<i class="flaticon-quote"></i>
+</div>
+ </div>
+</div>
+<div class="testimonial-card style1">
+<p class="client-quote">
+Nunc quam arcu, pretium quis quam sed aoreet efficitur liuam volutpat. lobortis sem consequat consequat impe nulla viverraut loremut tetur diam nunc bibendum impea Lorem ipsum dolor sit amet, consec isicing elit.
+</p>
+<div class="client-info-wrap">
+<div class="client-img">
+<img src="assets/img/testimonials/client-6.jpg" alt="Image">
+</div>
+<div class="client-info">
+<h3>Anjelic Lisa</h3>
+<span>Founder, Lexamd Inc</span>
+</div>
+<div class="quote-icon">
+<i class="flaticon-quote"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="blog-wrap pt-100 pb-75 bg-concrete">
+<div class="container">
+<div class="section-title style1 text-center mb-40">
+<span>RECENT POSTS</span>
+<h2>Read Our Latest News</h2>
+</div>
+<div class="row justify-content-center">
+<div class="col-xl-4 col-lg-6 col-md-6">
+<div class="blog-card style2">
+<div class="blog-img">
+<img src="assets/img/blog/blog-5.jpg" alt="Image">
+<p class="blog-date">12 Sep</p>
+</div>
+<div class="blog-info">
+<ul class="blog-metainfo  list-style">
+<li><i class="flaticon-user-1"></i> <a href="posts-by-author.html">Admin</a></li>
+<li><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>0 Comment</li>
+</ul>
+<h3><a href="blog-details-right-sidebar.html">Lighting The Way With Guest Daniel Stern</a></h3>
+<p>It is a long established fact that lorem will be when looking as it sito.</p>
+<a href="blog-details-right-sidebar.html" class="btn style2">Read More
+<i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6">
+<div class="blog-card style2">
+<div class="blog-img">
+<img src="assets/img/blog/blog-4.jpg" alt="Image">
+<p class="blog-date">25 Aug</p>
+</div>
+<div class="blog-info">
+<ul class="blog-metainfo  list-style">
+<li><i class="flaticon-user-1"></i> <a href="posts-by-author.html">Admin</a></li>
+<li><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>1 Comment</li>
+</ul>
+<h3><a href="blog-details-right-sidebar.html">How To Safely Road-trip During This Pandemic</a></h3>
+ <p>It is a long established fact that lorem will be when looking as it sito.</p>
+<a href="blog-details-right-sidebar.html" class="btn style2">Read More
+<i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6">
+<div class="blog-card style2">
+<div class="blog-img">
+<img src="assets/img/blog/blog-6.jpg" alt="Image">
+<p class="blog-date">22 Aug</p>
+</div>
+<div class="blog-info">
+<ul class="blog-metainfo  list-style">
+<li><i class="flaticon-user-1"></i> <a href="posts-by-author.html">Admin</a></li>
+<li><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>0 Comment</li>
+</ul>
+<h3><a href="blog-details-right-sidebar.html">Why Auto Driving Will Help You To Pass</a></h3>
+<p>It is a long established fact that lorem will be when looking as it sito.</p>
+<a href="blog-details-right-sidebar.html" class="btn style2">Read More
+<i class="flaticon-right-arrow"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<footer class="footer-wrap pt-100">
+<div class="container">
+<div class="row pb-75">
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+<div class="footer-widget">
+<a href="index.html" class="footer-logo">
+<img src="assets/img/logo.png" alt="Image">
+</a>
+<p class="comp-desc">
+Lorem ipsum dolor sit amet consec tetur aditon soom isotope elit esumo tempo incidunt labore dolore magna aliqu core teturos adicing slicing elititeous sedun.
+</p>
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com/">
+<i class="flaticon-facebook"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com/">
+<i class="flaticon-twitter"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://instagram.com/">
+<i class="flaticon-instagram"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com/">
+<i class="flaticon-linkedin"></i>
+</a>
+</li>
+</ul>
+</div>
+ </div>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6  pe-xl-5">
+<div class="footer-widget">
+<h3 class="footer-widget-title">Newsletter Signup</h3>
+<form action="#" class="newsletter-form">
+<p>Lorem ipsum dolor, sit amet consec tetur adipi sicing elit. Quisquam, illum.</p>
+<div class="form-group">
+<input type="email" placeholder="Enter Email">
+<button type="submit"><i class="flaticon-right-arrow-1"></i></button>
+</div>
+</form>
+</div>
+</div>
+<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h3 class="footer-widget-title">Our Courses</h3>
+<ul class="footer-menu list-style">
+<li>
+<a href="course-one.html">
+<i class="flaticon-right-arrow-1"></i>
+Learn To Drive
+</a>
+</li>
+<li>
+<a href="course-one.html">
+<i class="flaticon-right-arrow-1"></i>
+Courses For Adults
+</a>
+</li>
+<li>
+<a href="course-one.html">
+<i class="flaticon-right-arrow-1"></i>
+Foreign Driving
+</a>
+</li>
+<li>
+<a href="course-one.html">
+<i class="flaticon-right-arrow-1"></i>
+Auto Car Lessons
+</a>
+</li>
+<li>
+<a href="course-one.html">
+<i class="flaticon-right-arrow-1"></i>
+Courses For Teens
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h3 class="footer-widget-title">Contact Us</h3>
+<ul class="contact-info list-style">
+<li>
+<span><i class="flaticon-phone-call"></i></span>
+<h6>Call Now</h6>
+<a href="tel:02459271449">(+024) 592 71 449</a>
+</li>
+<li>
+<span><i class="flaticon-envelope"></i></span>
+<h6>Email</h6>
+<a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#1f6c6a6f6f706d6b5f7b76656a317c7072"><span class="__cf_email__" data-cfemail="88fbfdf8f8e7fafcc8ece1f2fda6ebe7e5">[email&#160;protected]</span></a>
+</li>
+<li>
+<span><i class="flaticon-location-1"></i></span>
+<h6>Location</h6>
+ <p>342/A Brooklyn St, Milson Avenue, New York, USA</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-text">
+<div class="container">
+<p><i class="ri-copyright-line"></i><script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> <span>Dizu</span>. All Rights Reserved By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+</div>
+</div>
+</footer>
+
+</div>
+
+
+<a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/form-validator.min.js"></script>
+<script src="assets/js/contact-form-script.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/fancybox.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/tweenmax.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+
+<!-- Mirrored from templates.hibootstrap.com/dizu/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 11:22:01 GMT -->
+</html>
