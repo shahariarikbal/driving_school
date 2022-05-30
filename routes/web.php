@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::group(['prefix' => 'admin'], function (){
     Route::get('/login', 'Admin\AdminController@adminLoginForm');
     Route::post('/login', 'Admin\AdminController@adminLogin');
