@@ -16,6 +16,7 @@ Route::view('/', 'frontend.home.index');
 
 
 Route::get('/lessons', 'Frontend\FrontendController@lessons');
+Route::get('/quiz', 'Frontend\FrontendController@quiz');
 
 Route::group(['prefix' => 'admin'], function (){
     Route::get('/login', 'Backend\AdminController@adminLoginForm');

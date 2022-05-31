@@ -29,7 +29,7 @@ class TopicController extends Controller
 
         if ($request->file('image')){
             $imageName = $request->name . time(). '.'. $request->image->extension();
-            $request->image->move('topic/', $imageName);
+            $request->image->move('assets/topic/', $imageName);
         }
 
         $topic = new Topic();
@@ -57,7 +57,7 @@ class TopicController extends Controller
                 unlink('topic/'.$topic->image);
             }
             $imageName = $request->name . time(). '.'. $request->image->extension();
-            $request->image->move('topic/', $imageName);
+            $request->image->move('assets/topic/', $imageName);
             $topic->image = $imageName;
         }
         $topic->name = $request->name;
@@ -70,7 +70,7 @@ class TopicController extends Controller
     {
         $topic = Topic::where('id', $topic->id)->first();
         if ($topic->image && file_exists('topic/'.$topic->image)){
-            unlink('topic/'.$topic->image);
+            unlink('assets/topic/'.$topic->image);
         }
         $topic->delete();
         return redirect('/admin/topic/index')->with('success', 'Topic has been delete');
