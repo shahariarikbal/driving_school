@@ -96,7 +96,7 @@
                                     <img src="{{ asset('/assets/topic/'.$category->image) }}" alt="Image" />
                                 </div>
                                 <div class="course-info">
-                                    <h3><a href="course-details.html">{{ $category->name }}</a></h3>
+                                    <h3><a href="{{ url('/quiz/question/'.$category->id. '/'.$category->slug) }}">{{ $category->name }}</a></h3>
                                     <div class="course-author-wrap">
                                         <a class="course-link link style1" href="{{ url('/quiz/question/'.$category->id. '/'.$category->slug) }}"> Read More <i class="flaticon-right-arrow"></i> </a>
                                     </div>
