@@ -90,6 +90,7 @@
                 </div>
 
                 {{-- intro video check.. --}}
+                {{-- intro video check.. --}}
                 @php
                     $file_intro = App\Models\File::where('is_active', 1)->where('type', 'intro')->first();
 
