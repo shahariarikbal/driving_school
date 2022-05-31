@@ -31,16 +31,36 @@
         </li>
 
 
-        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Question</label>
+        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Lessons</label>
 
-          {{-- category --}}
+          {{-- lesson --}}
+          <li class="br-menu-item">
+            <a href="#" class="br-menu-link with-sub {{ Request::is('admin/lesson*') ? 'show-sub' : ''}}">
+              <i class="menu-item-icon icon ion-play tx-24"></i>
+              {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+              <span class="menu-item-label">Lessons</span>
+            </a><!-- br-menu-link -->
+            <ul class="br-menu-sub" style="{{ Request::is('admin/lesson*') ? 'display: block;' : 'display: none;'}}">
+              <li class="sub-item">
+                <a href="{{ url('admin/lesson/index') }}" class="sub-link {{ Request::is('admin/lesson/index') ? 'active' : ''}}">Manage</a>
+              </li>
+              <li class="sub-item">
+                <a href="{{ url('admin/lesson/create') }}" class="sub-link {{ Request::is('admin/lesson/create') ? 'active' : ''}}">Add</a>
+              </li>
+            </ul>
+          </li>
+
+
+        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Quizes</label>
+
+          {{-- topic --}}
           <li class="br-menu-item">
             <a href="#" class="br-menu-link with-sub {{ Request::is('admin/topic*') ? 'show-sub' : ''}}">
               <i class="menu-item-icon icon ion-pound tx-24"></i>
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
               <span class="menu-item-label">Topic</span>
             </a><!-- br-menu-link -->
-            <ul class="br-menu-sub" style="{{ Request::is('admin/category*') ? 'display: block;' : 'display: none;'}}">
+            <ul class="br-menu-sub" style="{{ Request::is('admin/topic*') ? 'display: block;' : 'display: none;'}}">
               <li class="sub-item">
                 <a href="{{ url('admin/topic/index') }}" class="sub-link {{ Request::is('admin/topic/index') ? 'active' : ''}}">Manage</a>
               </li>

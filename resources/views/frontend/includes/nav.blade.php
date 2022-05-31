@@ -184,12 +184,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item has-dropdown">
+{{--                             <li class="nav-item has-dropdown">
                                 <a href="{{ url('lessons') }}" class="nav-link">
                                     Lessons
-                                    {{-- <i class="ri-arrow-down-s-fill"></i> --}}
+                                    <i class="ri-arrow-down-s-fill"></i>
                                 </a>
-{{--                                 <ul class="dropdown-menu">
+                                <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             Blog Layout
@@ -224,7 +224,12 @@
                                             </li>
                                         </ul>
                                     </li>
-                                </ul> --}}
+                                </ul>
+                            </li> --}}
+                            <li class="nav-item">
+                                <a href="{{ url('lessons') }}" class="nav-link">
+                                    Lessons
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a href="contact.html" class="nav-link">

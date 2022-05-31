@@ -31,5 +31,13 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/topic/edit/{topic}', 'Backend\TopicController@edit');
         Route::post('/topic/update/{topic}', 'Backend\TopicController@update');
         Route::get('/topic/delete/{topic}', 'Backend\TopicController@destroy');
+
+        //============ Topic manage ===============//
+        Route::get('/lesson/index', 'Backend\FileController@index');
+        Route::get('/lesson/create', 'Backend\FileController@create');
+        Route::post('/lesson/store', 'Backend\FileController@store');
+        Route::get('/lesson/edit/{id}', 'Backend\FileController@edit');
+        Route::post('/lesson/update/{id}', 'Backend\FileController@update');
+        Route::get('/lesson/delete/{id}', 'Backend\FileController@delete');
     });
 });
