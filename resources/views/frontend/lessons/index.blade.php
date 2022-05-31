@@ -3,6 +3,72 @@
 @section('page-css')
 <style>
 
+    .wh-promo-video-bg {
+        
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .wh-promo-video-bg .play-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+    .wh-promo-video-bg .play-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        text-align: center;
+        background: 0 0;
+        display: block;
+        width: 55%;
+        height: 100%;
+        padding: 15px 0 0;
+    }
+    .wh-promo-video-bg .play-text:after {
+        position: absolute;
+        top: -15px;
+        left: -15%;
+        content: "";
+        background: #ED1D24;
+        z-index: -1;
+        width: 130%;
+        height: 70px;
+    }
+    .wh-promo-video-bg .play-text span {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .wh-promo-video-bg .play-video .play-now {
+        background: #fff;
+        width: 60px;
+        height: 60px;
+        line-height: 64px;
+    }
+    .wh-promo-video-bg .play-video .play-now i {
+        color: #ED1D24;
+        font-size: 18px;
+    }
+    .wh-promo-video-bg .play-video .play-now .ripple {
+        width: 60px;
+        height: 60px;
+    }
+    .wh-promo-video-bg .play-video .play-now .ripple:before,
+    .wh-promo-video-bg .play-video .play-now .ripple:after {
+        width: 60px;
+        height: 60px;
+    }
 </style>
 @endsection
 
@@ -23,333 +89,111 @@
                     </div>
                 </div>
 
+                {{-- intro video check --}}
+                @php
+                    $file_intro = App\Models\File::where('is_active', 1)->where('type', 'intro')->first();
+
+                    $files = App\Models\File::where('is_active', 1)->where('type', '!=', 'intro')->orderBy('type', 'asc')->get();
 
 
+                    // tweak this variable to change to permission to watch the videos
+                    $is_allowed_to_see_video = 1;
+
+                @endphp
+
+                @if ($file_intro)
                 <section class="course-wrap ptb-100">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-4.jpg" alt="Image" />
+                        <div class="row gx-5">
+                            <div class="col-xl-10 offset-xl-1">
+                                <article>
+
+                                    <div class="wh-promo-video-bg bg-f" style="
+
+                                        background-image: url({{ asset('assets/files/' . $file_intro->image) }});
+
+                                    ">
+                                        <a class="play-video" data-fancybox href="{{ asset('/assets/files/' . $file_intro->file) }}">
+                                            <span class="play-now icon"> 
+                                                <i class="flaticon-play-1"></i>
+                                                <span class="ripple"></span>
+                                            </span>
+                                        </a>
                                     </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Advance</li>
-                                            <li><i class="flaticon-clock"></i>8 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Highway Driving</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-4.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Roger Federar</a>
-                                            </div>
-                                            <p class="course-price">$75</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
+
+                                <div class="content-title style1 text-center mt-4">
+                                    <h2>Simulazione aggiornata alla nuova modalità di esame con 30 quiz</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore sitor magna aliqua. Quis ipsum suspendisse ultrices <strong>gravida</strong>. Risus
+                                                commodo viverra manas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. viverra manas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
                                 </div>
+                                </article>
                             </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-5.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Advance</li>
-                                            <li><i class="flaticon-clock"></i>3 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Pre-Licensing Course</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-5.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Jay Watson</a>
-                                            </div>
-                                            <p class="course-price">$45</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-6.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Beginner</li>
-                                            <li><i class="flaticon-clock"></i>6 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Teen Driving Course</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-6.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Tonu Stark</a>
-                                            </div>
-                                            <p class="course-price">$89</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-1.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Advance</li>
-                                            <li><i class="flaticon-clock"></i>6 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">International Driving</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-1.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">David Watt</a>
-                                            </div>
-                                            <p class="course-price">$55</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-2.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Beginner</li>
-                                            <li><i class="flaticon-clock"></i>4 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Traffic Science</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-2.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Liam Noah</a>
-                                            </div>
-                                            <p class="course-price">$80</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-3.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Intermediate</li>
-                                            <li><i class="flaticon-clock"></i>6 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Defensive Driving</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-3.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">David Watt</a>
-                                            </div>
-                                            <p class="course-price">$60</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="page-navigation mt-10">
-                            <ul class="page-nav list-style">
-                                <li>
-                                    <a href="course-one.html"><i class="flaticon-left-arrow"></i></a>
-                                </li>
-                                <li><a class="active" href="course-one.html">1</a></li>
-                                <li><a href="course-one.html">2</a></li>
-                                <li><a href="course-one.html">3</a></li>
-                                <li>
-                                    <a href="course-one.html"><i class="flaticon-right-arrow-1"></i></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </section>
+                @endif
 
                 <section class="course-wrap ptb-100 bg-concrete">
                     <div class="container">
                         <div class="row justify-content-center">
+
+                            <div class="col-lg-12 aos-init aos-animate">
+
+                                <div class="content-title style1 text-center mb-4">
+                                    <span>Video Lessons</span>
+                                    <h2>25 Lezioni per Patente B e A</h2>
+                                </div>
+                                
+                            </div>
+
+                            @if ($files->count() > 0)
+                            @foreach ($files as $file)
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="course-card style2">
                                     <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-4.jpg" alt="Image" />
+
+                                        @if ($is_allowed_to_see_video)
+                                            
+                                            <div class="wh-promo-video-bg bg-f" style="
+
+                                                background-image: url({{ asset('assets/files/' . $file->image) }});
+                                                height: 250px;
+
+                                            ">
+                                                <a class="play-video" data-fancybox href="{{ asset('/assets/files/' . $file->file) }}">
+                                                    <span class="play-now icon"> 
+                                                        <i class="flaticon-play-1"></i>
+                                                        <span class="ripple"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+
+                                        @else
+
+                                            <img src="{{ url('assets/files/' . $file->image)}}" alt="Image" />
+                                        @endif
+
                                     </div>
                                     <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Advance</li>
-                                            <li><i class="flaticon-clock"></i>8 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Highway Driving</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-4.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Roger Federar</a>
-                                            </div>
-                                            <p class="course-price">$75</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
+                                        <h3><a href="#">{{ $file->title }}</a></h3>
+                                        <p>{{ mb_strimwidth($file->description, 0, 85, "...") }}</p>
+
+                                        @if ($is_allowed_to_see_video)
+                                            <a class="btn style2" data-fancybox href="{{ asset('/assets/files/' . $file->file) }}"> Watch Lesson <i class="flaticon-right-arrow"></i> </a>
+                                        @else
+                                            
+                                            <a class="btn style2"> Purchase Membership <i class="flaticon-right-arrow"></i> </a>
+
+                                        @endif
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-5.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Advance</li>
-                                            <li><i class="flaticon-clock"></i>3 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Pre-Licensing Course</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-5.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Jay Watson</a>
-                                            </div>
-                                            <p class="course-price">$45</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-6.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Beginner</li>
-                                            <li><i class="flaticon-clock"></i>6 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Teen Driving Course</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-6.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Tonu Stark</a>
-                                            </div>
-                                            <p class="course-price">$89</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-1.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Advance</li>
-                                            <li><i class="flaticon-clock"></i>6 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">International Driving</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-1.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">David Watt</a>
-                                            </div>
-                                            <p class="course-price">$55</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-2.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Beginner</li>
-                                            <li><i class="flaticon-clock"></i>4 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Traffic Science</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-2.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">Liam Noah</a>
-                                            </div>
-                                            <p class="course-price">$80</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6">
-                                <div class="course-card style2">
-                                    <div class="course-img">
-                                        <img src="{{ url('frontend/')}}/assets/img/courses/course-3.jpg" alt="Image" />
-                                    </div>
-                                    <div class="course-info">
-                                        <ul class="course-metainfo list-style">
-                                            <li><i class="flaticon-graph"></i>Intermediate</li>
-                                            <li><i class="flaticon-clock"></i>6 Week</li>
-                                        </ul>
-                                        <h3><a href="course-details.html">Defensive Driving</a></h3>
-                                        <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                                        <div class="course-author-wrap">
-                                            <div class="course-author">
-                                                <span class="course-author-img">
-                                                    <img src="{{ url('frontend/')}}/assets/img/team/instructor-3.jpg" alt="Image" />
-                                                </span>
-                                                <a href="team-details.html">David Watt</a>
-                                            </div>
-                                            <p class="course-price">$60</p>
-                                        </div>
-                                        <a class="btn style2" href="course-details.html"> Read More <i class="flaticon-right-arrow"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @endif
                         </div>
-                        <div class="page-navigation mt-10">
+{{--                         <div class="page-navigation mt-10">
                             <ul class="page-nav list-style">
                                 <li>
                                     <a href="course-one.html"><i class="flaticon-left-arrow"></i></a>
@@ -361,7 +205,7 @@
                                     <a href="course-one.html"><i class="flaticon-right-arrow-1"></i></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </section>
             </div>

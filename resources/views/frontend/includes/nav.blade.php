@@ -77,7 +77,7 @@
         <div class="container">
             <div class="header-bottom">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{asset('/frontend/')}}/assets/img/logo.png" alt="logo" />
                     </a>
                     <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
@@ -90,17 +90,6 @@
                                     Home
                                     <i class="ri-arrow-down-s-fill"></i>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="index.html" class="nav-link active">Home One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-2.html" class="nav-link">Home Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-3.html" class="nav-link">Home Three</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item has-dropdown">
                                 <a href="#" class="nav-link">
@@ -109,13 +98,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="course-one.html" class="nav-link">Course One</a>
+                                        <a href="#" class="nav-link">Course One</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="course-two.html" class="nav-link">Course Two</a>
+                                        <a href="#" class="nav-link">Course Two</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="course-details.html" class="nav-link">Course Details</a>
+                                        <a href="#" class="nav-link">Course Details</a>
                                     </li>
                                 </ul>
                             </li>
@@ -184,12 +173,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item has-dropdown">
+{{--                             <li class="nav-item has-dropdown">
                                 <a href="{{ url('lessons') }}" class="nav-link">
                                     Lessons
-                                    {{-- <i class="ri-arrow-down-s-fill"></i> --}}
+                                    <i class="ri-arrow-down-s-fill"></i>
                                 </a>
-{{--                                 <ul class="dropdown-menu">
+                                <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             Blog Layout
@@ -224,7 +213,12 @@
                                             </li>
                                         </ul>
                                     </li>
-                                </ul> --}}
+                                </ul>
+                            </li> --}}
+                            <li class="nav-item">
+                                <a href="{{ url('lessons') }}" class="nav-link">
+                                    Lessons
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a href="contact.html" class="nav-link">
