@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// test line 
+
 Route::view('/', 'frontend.home.index');
 
 
