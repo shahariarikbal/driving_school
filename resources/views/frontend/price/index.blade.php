@@ -102,7 +102,11 @@
                                 {{ $price->features }}
                             </p>
                             <div class="purchase-btn">
-                                <a href="login.html" class="btn style2">Get Enrolled</a>
+                                @if(auth()->check())
+                                    <a href="{{ url('/enrolled') }}" class="btn style2">Get Enrolled</a>
+                                @else
+                                    <a href="{{ url('/login') }}" class="btn style2">Get Enrolled</a>
+                                @endif
                             </div>
                         </div>
                     </div>

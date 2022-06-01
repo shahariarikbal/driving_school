@@ -52,3 +52,7 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/lesson/delete/{id}', 'Backend\FileController@delete');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
