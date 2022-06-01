@@ -77,7 +77,7 @@
         <div class="container">
             <div class="header-bottom">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{asset('/frontend/')}}/assets/img/logo.png" alt="logo" />
                     </a>
                     <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
@@ -92,7 +92,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="index.html" class="nav-link active">Home One</a>
+                                        <a href="{{ url('/') }}" class="nav-link active">Home One</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="index-2.html" class="nav-link">Home Two</a>
