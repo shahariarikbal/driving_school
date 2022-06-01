@@ -40,11 +40,11 @@ class SubscriptionController extends Controller
 
     public function edit(Subscription $subscription)
     {
-        $page = 'create';
+        $page = 'edit';
         return view('backend.subscription.create', compact('page', 'subscription'));
     }
 
-    public function update(Request $request, Subscription $subscription)
+    public function update(Request $request, $id)
     {
         $this->validate($request,[
             'title' => 'required',
@@ -52,6 +52,7 @@ class SubscriptionController extends Controller
             'price' => 'required',
             'features' => 'required',
         ]);
+        $subscription = Subscription::find($id);
         $subscription->title = trim($request->title);
         $subscription->duration = $request->duration;
         $subscription->price = $request->price;

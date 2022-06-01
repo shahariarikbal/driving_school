@@ -32,7 +32,7 @@
                             <td>{{ $subscription->title }}</td>
                             <td>{{ $subscription->duration }}</td>
                             <td>{{ $subscription->price }}</td>
-                            <td>{{ $subscription->features }}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($subscription->features, 50) }}</td>
                             <td>
                                 <a href="{{ url('/admin/subscription/edit/'.$subscription->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                 <a href="{{ url('/admin/subscription/delete/'.$subscription->id) }}" class="btn btn-sm btn-danger">Delete</a>
