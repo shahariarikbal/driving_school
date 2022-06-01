@@ -88,7 +88,6 @@
                             <li class="nav-item has-dropdown">
                                 <a href="#" class="nav-link active">
                                     Home
-                                    <i class="ri-arrow-down-s-fill"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
@@ -101,23 +100,12 @@
                                         <a href="index-3.html" class="nav-link">Home Three</a>
                                     </li>
                                 </ul>
+
                             </li>
                             <li class="nav-item has-dropdown">
-                                <a href="#" class="nav-link">
+                                <a href="{{ url('/quiz') }}" class="nav-link">
                                     Driving Licence Quiz
-                                    <i class="ri-arrow-down-s-fill"></i>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="course-one.html" class="nav-link">Course One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="course-two.html" class="nav-link">Course Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="course-details.html" class="nav-link">Course Details</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item has-dropdown">
                                 <a href="#" class="nav-link">

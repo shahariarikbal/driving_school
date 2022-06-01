@@ -136,6 +136,21 @@
                   </li>
               </ul>
           </li>
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/subscription*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-ios-cart-outline tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Subscription</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/order*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/subscription/index') }}" class="sub-link {{ Request::is('admin/subscription/index') ? 'active' : ''}}">Manage</a>
+                  </li>
+                  <li class="sub-item">
+                      <a href="{{ url('admin/subscription/add') }}" class="sub-link {{ Request::is('admin/subscription/add') ? 'active' : ''}}">Add</a>
+                  </li>
+              </ul>
+          </li>
 
           <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Settings</label>
 

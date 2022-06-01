@@ -29,7 +29,7 @@
                             <td>{{ $loop->index+1 }}</td>
                             <td>
                                 @if($topic->image)
-                                    <img src="{{ asset('/topic/'.$topic->image) }}" height="50" width="50" />
+                                    <img src="{{ asset('/assets/topic/'.$topic->image) }}" height="50" width="50" />
                                 @else
                                     <span>No image found</span>
                                 @endif
