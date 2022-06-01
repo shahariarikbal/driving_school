@@ -20,17 +20,30 @@
                         @csrf
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" name="title" value="{{ $subscription->title ?? old('title') }}" class="form-control" placeholder="Topic title" required>
-                            @if ($errors->has('name'))
-                                <div class="text-danger">{{ $errors->first('name') }}</div>
+                            <input type="text" name="title" value="{{ $subscription->title ?? old('title') }}" class="form-control" placeholder="Title" required>
+                            @if ($errors->has('title'))
+                                <div class="text-danger">{{ $errors->first('title') }}</div>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="">Image</label>
-                            <input type="file" name="image" value="" class="form-control" onchange="imagePreview(event)">
-                            <img src="" id="pre-logo"/>
-                            @if(!empty($topic->image))
-                                <img src="{{ asset('/topic/'.$topic->image) }}" height="100" width="100"/>
+                            <label for="">Duration</label>
+                            <input type="number" name="duration" value="{{ $subscription->duration ?? old('duration') }}" class="form-control" placeholder="Duration" required>
+                            @if ($errors->has('duration'))
+                                <div class="text-danger">{{ $errors->first('duration') }}</div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label for="">Price</label>
+                            <input type="number" name="price" value="{{ $subscription->price ?? old('price') }}" class="form-control" placeholder="Price" required>
+                            @if ($errors->has('price'))
+                                <div class="text-danger">{{ $errors->first('price') }}</div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label for="">Features</label>
+                            <textarea class="form-control" name="features" rows="5" placeholder="Features" required>{{ $subscription->features ?? old('features') }}</textarea>
+                            @if ($errors->has('features'))
+                                <div class="text-danger">{{ $errors->first('features') }}</div>
                             @endif
                         </div>
                         <div class="form-group">
