@@ -98,7 +98,7 @@
                                 <h2>${{ number_format($price->price,2) }}</h2>
                                 <span>{{ $price->duration }} Per Month</span>
                             </div>
-                            <p style="text-align: center">
+                            <p style="text-align: justify">
                                 {{ $price->features }}
                             </p>
                             <div class="purchase-btn">
