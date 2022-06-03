@@ -97,15 +97,28 @@
                             </div>
                             <div class="login-form">
                                 <div class="login-body">
-                                    <form class="form-wrap" action="#">
+                                    <form class="form-wrap" action="{{ route('login') }}" method="POST">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input id="text" name="fname" type="text" placeholder="Username Or Email Address" required> </div>
+                                                    <input id="text" name="email" type="email" class="@error('email') is-invalid @enderror" placeholder="Username Or Email Address" required>
+                                                </div>
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input id="pwd" name="pwd" type="password" placeholder="Password"> </div>
+                                                    <input id="pwd" name="password" type="password" class="@error('password') is-invalid @enderror" placeholder="Password">
+                                                </div>
+                                                @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-end mb-20"> <a href="#" class="link style1">Forgot Password?</a> </div>
                                             <div class="col-lg-12">

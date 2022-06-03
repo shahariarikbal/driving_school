@@ -103,7 +103,7 @@
                             </p>
                             <div class="purchase-btn">
                                 @if(auth()->check())
-                                    <a href="{{ url('/enrolled') }}" class="btn style2">Get Enrolled</a>
+                                    <a href="{{ url('/enrolled/'.$price->id) }}" class="btn style2">Get Enrolled</a>
                                 @else
                                     <a href="{{ url('/login') }}" class="btn style2">Get Enrolled</a>
                                 @endif
