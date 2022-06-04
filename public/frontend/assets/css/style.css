@@ -6381,3 +6381,31 @@ article .post-img img {
     color: #fff;
     background-color: #94be5d;
 }
+
+
+
+.header-btn:hover .user_hover_box{
+    display: block !important;
+}
+
+ul.dropdown-menu.user_hover_box {
+    background: #851518 !important;
+    
+    /* color: white !important; */
+}
+
+ul.dropdown-menu.user_hover_box {}
+
+ul.dropdown-menu.user_hover_box .nav-item a {
+    color: white !important;
+    opacity: 0.7;
+}
+
+ul.dropdown-menu.user_hover_box .nav-item {
+    border-bottom: 1px solid #ffffff85;
+}
+
+
+ul.dropdown-menu.user_hover_box .nav-item:last-child {
+    border-bottom: none;
+}

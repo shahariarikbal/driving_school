@@ -147,7 +147,7 @@
                       <a href="{{ url('admin/subscription/index') }}" class="sub-link {{ Request::is('admin/subscription/index') ? 'active' : ''}}">Manage</a>
                   </li>
                   <li class="sub-item">
-                      <a href="{{ url('admin/subscription/add') }}" class="sub-link {{ Request::is('admin/subscription/add') ? 'active' : ''}}">Add</a>
+                      <a href="{{ url('admin/subscription/create') }}" class="sub-link {{ Request::is('admin/subscription/add') ? 'active' : ''}}">Add</a>
                   </li>
               </ul>
           </li>

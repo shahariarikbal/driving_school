@@ -97,7 +97,13 @@
 
 
                     // tweak this variable to change to permission to watch the videos
-                    $is_allowed_to_see_video = 1;
+
+                    if (Auth::check() && Auth::user()->subscription_id != null && Auth::user()->is_paid == true ) {
+                        
+                        $is_allowed_to_see_video = 1;
+                    }else{
+                        $is_allowed_to_see_video = 0;                        
+                    }
 
                 @endphp
 
@@ -184,7 +190,7 @@
                                             <a class="btn style2" data-fancybox href="{{ asset('/assets/files/' . $file->file) }}"> Watch Lesson <i class="flaticon-right-arrow"></i> </a>
                                         @else
                                             
-                                            <a class="btn style2"> Purchase Membership <i class="flaticon-right-arrow"></i> </a>
+                                            <a href="{{ url('price/table') }}" class="btn style2"> Purchase Membership <i class="flaticon-right-arrow"></i> </a>
 
                                         @endif
                                     </div>

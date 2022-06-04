@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-
+    {{-- @dd(Auth::check()) --}}
 
     <div class="hero-wrap style1 bg-concrete">
         <img src="{{asset('/frontend/')}}/assets/img/hero/home-bg.png" alt="Image" class="hero-shape-one" />
@@ -130,6 +130,15 @@
         </div>
     </section>
 
+
+
+    {{-- intro video check --}}
+    @php
+
+        $files = App\Models\File::where('is_active', 1)->where('type', '!=', 'intro')->orderBy('type', 'asc')->inRandomOrder()->take(3)->get();
+
+    @endphp
+
     <section class="course-wrap ptb-100 bg-concrete">
         <div class="container">
             <div class="row">
@@ -141,70 +150,58 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="course-card style1">
+
+                
+
+                @if ($files->count() > 0)
+                @foreach ($files as $file)
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="course-card style2">
                         <div class="course-img">
-                            <img src="{{asset('/frontend/')}}/assets/img/courses/course-1.jpg" alt="Image" />
+
+                            @if (0)
+                                
+                                <div class="wh-promo-video-bg bg-f" style="
+
+                                    background-image: url({{ asset('assets/files/' . $file->image) }});
+                                    height: 250px;
+
+                                ">
+                                    <a class="play-video" data-fancybox href="{{ asset('/assets/files/' . $file->file) }}">
+                                        <span class="play-now icon"> 
+                                            <i class="flaticon-play-1"></i>
+                                            <span class="ripple"></span>
+                                        </span>
+                                    </a>
+                                </div>
+
+                            @else
+
+                                <img src="{{ url('assets/files/' . $file->image)}}" alt="Image" />
+                            @endif
+
                         </div>
                         <div class="course-info">
-                            <span class="horizontal-line"></span>
-                            <h3><a href="course-details.html">International Driving</a></h3>
-                            <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                            <div class="course-author-wrap">
-                                <div class="course-author">
-                                            <span class="course-author-img">
-                                                <img src="{{asset('/frontend/')}}/assets/img/team/instructor-1.jpg" alt="Image" />
-                                            </span>
-                                    <a href="team-details.html">Willium James</a>
-                                </div>
-                            </div>
+                            <h3><a href="#">{{ $file->title }}</a></h3>
+                            <p>{{ mb_strimwidth($file->description, 0, 85, "...") }}</p>
+
+                            @if (0)
+                                <a class="btn style2" data-fancybox href="{{ asset('/assets/files/' . $file->file) }}"> Watch Lesson <i class="flaticon-right-arrow"></i> </a>
+                            @else
+                                
+                                <a href="{{ url('price/table') }}" class="btn style2"> Purchase Membership <i class="flaticon-right-arrow"></i> </a>
+
+                            @endif
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
-                    <div class="course-card style1">
-                        <div class="course-img">
-                            <img src="{{asset('/frontend/')}}/assets/img/courses/course-2.jpg" alt="Image" />
-                        </div>
-                        <div class="course-info">
-                            <span class="horizontal-line"></span>
-                            <h3><a href="course-details.html">Traffic Science</a></h3>
-                            <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                            <div class="course-author-wrap">
-                                <div class="course-author">
-                                            <span class="course-author-img">
-                                                <img src="{{asset('/frontend/')}}/assets/img/team/instructor-2.jpg" alt="Image" />
-                                            </span>
-                                    <a href="team-details.html">Liam Noah</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
-                    <div class="course-card style1">
-                        <div class="course-img">
-                            <img src="{{asset('/frontend/')}}/assets/img/courses/course-3.jpg" alt="Image" />
-                        </div>
-                        <div class="course-info">
-                            <span class="horizontal-line"></span>
-                            <h3><a href="course-details.html">Defensive Driving</a></h3>
-                            <p>Praesentium exercitationem ornare litorac thinan distinctio iaculis modi.</p>
-                            <div class="course-author-wrap">
-                                <div class="course-author">
-                                            <span class="course-author-img">
-                                                <img src="{{asset('/frontend/')}}/assets/img/team/instructor-3.jpg" alt="Image" />
-                                            </span>
-                                    <a href="team-details.html">David Watt</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                @endif
+
             </div>
             <div class="text-center mt-10">
                 <p class="section-subtext">
-                    <a href="course-one.html" class="link style1"> View All Courses <i class="flaticon-right-arrow"></i></a>
+                    <a href="{{ url('/lessons') }}" class="link style1"> View All Courses <i class="flaticon-right-arrow"></i></a>
                 </p>
             </div>
         </div>
@@ -261,7 +258,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="course-one.html" class="btn style1">Start Courses</a>
+                        <a href="{{ url('/lessons') }}" class="btn style1">Start Courses</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 order-lg-2 order-1" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">

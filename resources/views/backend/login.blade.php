@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="{{ asset('backend/css/bracket.css') }}">
   </head>
   <body>
-
     <div class="row no-gutters flex-row-reverse ht-100v">
       <div class="col-md-6 bg-gray-200 d-flex align-items-center justify-content-center">
         <div class="login-wrapper wd-250 wd-xl-350 mg-y-30">

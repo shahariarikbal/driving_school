@@ -99,13 +99,28 @@
                                 <span>{{ $price->duration }} Per Month</span>
                             </div>
                             <p style="text-align: justify">
-                                {{ $price->features }}
+                                {!! $price->features !!}
                             </p>
                             <div class="purchase-btn">
-                                @if(auth()->check())
-                                    <a href="{{ url('/enrolled/'.$price->id) }}" class="btn style2">Get Enrolled</a>
+
+
+                                @if(Auth::check() && Auth::user()->subscription_id != null)
+                                    @if (Auth::user()->subscription_id == $price->id  && Auth::user()->is_paid == false)                                        
+                                        <a href="#" class="btn style2">Pending Approval</a>
+
+                                    @elseif(Auth::user()->subscription_id == $price->id  && Auth::user()->is_paid == true)    
+                                        <a href="#" class="btn style2">Purchased</a>
+
+                                    @elseif(Auth::user()->subscription_id != $price->id  && Auth::user()->is_paid == true) 
+                                        <a onclick="return confirm('Are you sure?')" href="{{ url('/enrolled/'.$price->id) }}" class="btn style2">Get Enrolled</a>
+                                    @endif
+
+                                @elseif(auth()->check())
+                                    <a onclick="return confirm('Are you sure?')" href="{{ url('/enrolled/'.$price->id) }}" class="btn style2">Get Enrolled</a>
+
+
                                 @else
-                                    <a href="{{ url('/login') }}" class="btn style2">Get Enrolled</a>
+                                    <a href="{{ url('/login') }}" class="btn style2">Login to Purchase</a>
                                 @endif
                             </div>
                         </div>

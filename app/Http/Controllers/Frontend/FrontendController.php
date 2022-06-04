@@ -32,6 +32,6 @@ class FrontendController extends Controller
         $enrolled = User::where('id', auth()->user()->id)->first();
         $enrolled->subscription_id = $id;
         $enrolled->save();
-        return redirect('/')->with('success', 'Your subscription has been submitted');
+        return redirect('/')->with('success', 'Your subscription request has been submitted. Please wait for admin approval.');
     }
 }

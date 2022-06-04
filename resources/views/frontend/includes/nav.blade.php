@@ -225,7 +225,14 @@
                                 </a>
                             </li>
                             <li class="nav-item xl-none">
-                                <a href="#" class="btn style1">Get Started</a>
+                                @if(Auth::check())
+
+                                    <a onclick="document.querySelector('#logout-form').submit()" style="cursor: pointer;" class="btn style1">{{ 'Logout' }}</a>
+
+
+                                @else
+                                    <a href="{{ url('/login') }}" class="btn style1">Get Started</a>
+                                @endif
                             </li>
                         </ul>
                         <div class="others-options lg-none">
@@ -235,11 +242,31 @@
                                 </button>
                             </div>
                             <div class="header-btn">
-                                <a href="course-one.html" class="btn style1">Get Started</a>
+
+                               @if(Auth::check())
+
+                                    <a href="#" class="btn style1">{{ Auth::user()->name }}</a>
+
+                                    <ul class="dropdown-menu user_hover_box">
+                                        <li class="nav-item">
+
+                                            <a onclick="document.querySelector('#logout-form').submit()" style="cursor: pointer;" class="nav-link active">{{ 'Logout' }}</a>
+                                        </li>
+                                    </ul>
+
+                               @else
+                                 <a href="{{ url('/login') }}" class="btn style1">Get Started</a>
+                               @endif
                             </div>
                         </div>
                     </div>
                 </nav>
+
+
+                <form action="{{ url('/logout') }}" id="logout-form" method="POST" class="d-none">
+                    @csrf
+                    
+                </form>
                 <div class="mobile-bar-wrap">
                     <div class="mobile-sidebar">
                         <i class="ri-menu-4-line"></i>
