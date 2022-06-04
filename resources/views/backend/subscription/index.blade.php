@@ -18,13 +18,27 @@
                     <thead>
                     <tr>
                         <th class="">#</th>
-                        <th class="">Image</th>
-                        <th class="">Name</th>
+                        <th class="">Title</th>
+                        <th class="">Duration</th>
+                        <th class="">Price</th>
+                        <th class="">Feature</th>
                         <th class="">Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                        ===========================
+                    @foreach($subscriptions as $subscription)
+                        <tr>
+                            <td>{{ $loop->index+1 }}</td>
+                            <td>{{ $subscription->title }}</td>
+                            <td>{{ $subscription->duration }}</td>
+                            <td>{{ $subscription->price }}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($subscription->features, 50) }}</td>
+                            <td>
+                                <a href="{{ url('/admin/subscription/edit/'.$subscription->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ url('/admin/subscription/delete/'.$subscription->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div><!-- table-wrapper -->

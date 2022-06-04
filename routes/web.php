@@ -17,6 +17,8 @@ Route::view('/', 'frontend.home.index');
 
 Route::get('/lessons', 'Frontend\FrontendController@lessons');
 Route::get('/quiz', 'Frontend\FrontendController@quiz');
+Route::get('/price/table', 'Frontend\FrontendController@price');
+Route::get('/enrolled/{id}', 'Frontend\FrontendController@enrolled');
 
 Route::group(['prefix' => 'admin'], function (){
     Route::get('/login', 'Backend\AdminController@adminLoginForm');
@@ -39,7 +41,7 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/subscription/create', 'Backend\SubscriptionController@create');
         Route::post('/subscription/store', 'Backend\SubscriptionController@store');
         Route::get('/subscription/edit/{subscription}', 'Backend\SubscriptionController@edit');
-        Route::post('/subscription/update/{subscription}', 'Backend\SubscriptionController@update');
+        Route::post('/subscription/update/{id}', 'Backend\SubscriptionController@update');
         Route::get('/subscription/delete/{subscription}', 'Backend\SubscriptionController@destroy');
 
         //============ Lesson manage ===============//
@@ -51,3 +53,7 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/lesson/delete/{id}', 'Backend\FileController@delete');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

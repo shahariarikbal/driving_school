@@ -220,12 +220,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">
+                                <a href="{{ url('price/table') }}" class="nav-link">
                                     Prices
                                 </a>
                             </li>
                             <li class="nav-item xl-none">
-                                <a href="course-one.html" class="btn style1">Get Started</a>
+                                <a href="#" class="btn style1">Get Started</a>
                             </li>
                         </ul>
                         <div class="others-options lg-none">
