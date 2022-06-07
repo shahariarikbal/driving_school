@@ -104,9 +104,6 @@
               </li>
             </ul>
           </li>
-
-
-
           <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Manage Others</label>
 
           <li class="br-menu-item">

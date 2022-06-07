@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Session;
 class AdminController extends Controller
@@ -41,6 +42,28 @@ class AdminController extends Controller
     public function adminDashboard()
     {
         return view('backend.dashboard');
+    }
+
+    public function userList()
+    {
+        $users = User::orderBy('created_at', 'desc')->get();
+        return view('backend.user.index', compact('users'));
+    }
+
+    public function active($id)
+    {
+        $user = User::find($id);
+        $user->is_active = 1;
+        $user->save();
+        return redirect()->back()->with('success', 'User package has been activated');
+    }
+
+    public function paid($id)
+    {
+        $user = User::find($id);
+        $user->is_paid = 1;
+        $user->save();
+        return redirect()->back()->with('success', 'User payment has been paid');
     }
 
     public function logout(Request $request)

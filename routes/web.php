@@ -26,6 +26,9 @@ Route::group(['prefix' => 'admin'], function (){
     Route::group(['middleware' => 'admin'], function (){
         Route::get('/dashboard', 'Backend\AdminController@adminDashboard');
         Route::post('/logout', 'Backend\AdminController@logout');
+        Route::get('/user/index', 'Backend\AdminController@userList');
+        Route::get('/user/active/{id}', 'Backend\AdminController@active');
+        Route::get('/user/paid/{id}', 'Backend\AdminController@paid');
 
         //============ Topic manage ===============//
         Route::get('/topic/index', 'Backend\TopicController@index');
