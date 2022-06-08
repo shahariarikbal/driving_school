@@ -93,7 +93,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('/quiz') }}" class="nav-link {{ Request::url() == url('/quiz') ? 'active' : '' }}">
-                                    License Quiz
+                                    Simulation Center
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -108,7 +108,12 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('price/table') }}" class="nav-link {{ Request::url() == url('price/table') ? 'active' : '' }}">
-                                    Prices
+                                    Pricings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('register') }}" class="nav-link {{ Request::url() == url('register') ? 'active' : '' }}">
+                                    Register
                                 </a>
                             </li>
                             <li class="nav-item xl-none">

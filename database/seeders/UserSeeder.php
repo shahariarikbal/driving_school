@@ -28,6 +28,8 @@ class UserSeeder extends Seeder
 
         for($i=1;$i<=4;$i++){
 
+
+
             DB::table('users')->insert([
                 'subscription_id' => null,
                 'name' => 'User' . $i,

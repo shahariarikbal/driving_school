@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/eurekabd/driving.eureka-bd.com/
+    - /bin/cp -R . $DEPLOYPATH
