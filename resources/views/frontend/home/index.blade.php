@@ -89,7 +89,7 @@
                         <div class="about-bg-1 bg-f"></div>
                         <div class="about-promo-box bounce">
                             <i class="flaticon-star"></i>
-                            <h4>228 <span>Driving Courses</span></h4>
+                            <h4>26+ <span>Driving Courses</span></h4>
                         </div>
                         <img src="{{asset('/frontend/')}}/assets/img/about/about-shape-1.png" alt="Image" class="about-shape-one moveHorizontal" />
                     </div>
