@@ -16,7 +16,8 @@ Route::view('/', 'frontend.home.index');
 
 
 Route::get('/lessons', 'Frontend\FrontendController@lessons');
-Route::get('/quiz', 'Frontend\FrontendController@quiz');
+Route::get('/topics', 'Frontend\FrontendController@topics');
+Route::view('/quiz', 'frontend.home.quiz');
 Route::get('/price/table', 'Frontend\FrontendController@price');
 Route::get('/enrolled/{id}', 'Frontend\FrontendController@enrolled');
 

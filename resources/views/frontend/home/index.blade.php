@@ -137,6 +137,16 @@
 
         $files = App\Models\File::where('is_active', 1)->where('type', '!=', 'intro')->orderBy('type', 'asc')->inRandomOrder()->take(3)->get();
 
+
+        // tweak this variable to change to permission to watch the videos
+
+        if (Auth::check() && Auth::user()->subscription_id != null && Auth::user()->is_paid == true ) {
+            
+            $is_allowed_to_see_video = 1;
+        }else{
+            $is_allowed_to_see_video = 0;                        
+        }
+
     @endphp
 
     <section class="course-wrap ptb-100 bg-concrete">
@@ -159,7 +169,7 @@
                     <div class="course-card style2">
                         <div class="course-img">
 
-                            @if (0)
+                            @if ($is_allowed_to_see_video)
                                 
                                 <div class="wh-promo-video-bg bg-f" style="
 
@@ -185,7 +195,7 @@
                             <h3><a href="#">{{ $file->title }}</a></h3>
                             <p>{{ mb_strimwidth($file->description, 0, 85, "...") }}</p>
 
-                            @if (0)
+                            @if ($is_allowed_to_see_video)
                                 <a class="btn style2" data-fancybox href="{{ asset('/assets/files/' . $file->file) }}"> Watch Lesson <i class="flaticon-right-arrow"></i> </a>
                             @else
                                 

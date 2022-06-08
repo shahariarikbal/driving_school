@@ -199,19 +199,7 @@
                             @endforeach
                             @endif
                         </div>
-{{--                         <div class="page-navigation mt-10">
-                            <ul class="page-nav list-style">
-                                <li>
-                                    <a href="course-one.html"><i class="flaticon-left-arrow"></i></a>
-                                </li>
-                                <li><a class="active" href="course-one.html">1</a></li>
-                                <li><a href="course-one.html">2</a></li>
-                                <li><a href="course-one.html">3</a></li>
-                                <li>
-                                    <a href="course-one.html"><i class="flaticon-right-arrow-1"></i></a>
-                                </li>
-                            </ul>
-                        </div> --}}
+
                     </div>
                 </section>
             </div>

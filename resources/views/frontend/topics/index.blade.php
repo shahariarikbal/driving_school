@@ -69,6 +69,9 @@
         width: 60px;
         height: 60px;
     }
+    .cat_image{
+        height: 356px;
+    }
 </style>
 @endsection
 
@@ -78,22 +81,31 @@
             <div class="overlay op-8 bg-downriver"></div>
             <div class="container">
                 <div class="breadcrumb-title">
-                    <h2>Our Courses</h2>
+                    <h2>All Topics</h2>
                     <ul class="breadcrumb-menu list-style">
                         <li><a href="{{ url('/') }}">Home </a></li>
-                        <li>Course</li>
+                        <li>Topics</li>
                     </ul>
                 </div>
             </div>
         </div>
         <section class="course-wrap ptb-100">
             <div class="container">
+
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div class="section-title style1 text-center mb-40">
+                        <span>Topic List</span>
+                        <h2 class="text-capitalize">Pick a topic to start exam</h2>
+                    </div>
+                </div>
+            </div>
                 <div class="row justify-content-center">
                     @foreach($categories as $category)
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="course-card style1">
                                 <div class="course-img">
-                                    <img src="{{ asset('/assets/topic/'.$category->image) }}" alt="Image" />
+                                    <img src="{{ asset('/assets/topic/'.$category->image) }}" alt="Image" class="img-fluid cat_image" />
                                 </div>
                                 <div class="course-info">
                                     <h3><a href="{{ url('/quiz/question/'.$category->id. '/'.$category->slug) }}">{{ $category->name }}</a></h3>
