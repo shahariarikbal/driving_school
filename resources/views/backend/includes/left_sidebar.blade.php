@@ -104,6 +104,19 @@
               </ul>
           </li>
 
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/subscription*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-person-stalker tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Subscription Users</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/order*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/subscription/user') }}" class="sub-link {{ Request::is('admin/subscription/user') ? 'active' : ''}}">Subscription Users</a>
+                  </li>
+              </ul>
+          </li>
+
           <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Settings</label>
           <li class="br-menu-item">
               <a href="#" class="br-menu-link with-sub {{ Request::is('admin/settings*') ? 'show-sub' : ''}}">

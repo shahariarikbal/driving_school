@@ -21,8 +21,6 @@
                         <th class="">Name</th>
                         <th class="">Email</th>
                         <th class="">Phone</th>
-                        <th class="">Is Paid</th>
-                        <th class="">Is Active</th>
                         <th class="">Action</th>
                     </tr>
                     </thead>
@@ -34,34 +32,8 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->phone }}</td>
                             <td>
-                                @if($user->is_paid == 0)
-                                    <span class="text-danger">Pending</span>
-                                @else
-                                    <span class="text-success">Paid</span>
-                                @endif
-                            </td>
-                            <td>
-                                @if($user->is_active == 0)
-                                    <span class="text-danger">Not Active</span>
-                                @else
-                                    <span class="text-success">Active</span>
-                                @endif
-                            </td>
-                            <td>
-                                <a href="{{ url('/admin/user/paid/'.$user->id) }}" class="">
-
-                                    @if($user->is_paid == 0)
-                                        <span class="btn btn-sm btn-danger">Pending</span>
-                                    @else
-                                        <span class="btn btn-sm btn-success">Paid</span>
-                                    @endif
-                                </a>
-                                <a href="{{ url('/admin/user/active/'.$user->id) }}" class="">                                                                        
-                                    @if($user->is_active == 0)
-                                        <span class="btn btn-sm btn-danger">Not Active</span>
-                                    @else
-                                       <span class="btn btn-sm btn-success">Active</span>
-                                    @endif
+                                <a href="{{ url('/admin/user/delete/'.$user->id) }}" class="" onclick="return confirm('Are you sure delete this user')">
+                                    <span class="btn btn-sm btn-danger">Delete</span>
                                 </a>
                             </td>
                         </tr>

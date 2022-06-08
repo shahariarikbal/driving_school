@@ -69,6 +69,14 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'User payment has been updated');
     }
 
+    public function userDelete($id)
+    {
+        $userDelete = User::find($id);
+        if(!$userDelete) {return redirect()->back()->with('error', 'Something went wrong.');}
+        $userDelete->delete();
+        return redirect()->back()->with('success', 'User has been deleted');
+    }
+
     public function logout(Request $request)
     {
         Session()->flush();
