@@ -4,7 +4,7 @@
     <div class="br-pagetitle">
         <i class="icon ion-pound"></i>
         <div>
-            <h4>Manage Topic</h4>
+            <h4>Manage Users</h4>
             <p class="mg-b-0">
                 <a href="{{ url('admin/dashboard') }}">Dashboard</a>
                 / <a href="{{ url('admin/user/index') }}">Manage user</a>
@@ -48,8 +48,21 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ url('/admin/user/active/'.$user->id) }}" class="btn btn-primary btn-sm">Active</a>
-                                <a href="{{ url('/admin/user/paid/'.$user->id) }}" class="btn btn-success btn-sm">Paid</a>
+                                <a href="{{ url('/admin/user/paid/'.$user->id) }}" class="">
+
+                                    @if($user->is_paid == 0)
+                                        <span class="btn btn-sm btn-danger">Pending</span>
+                                    @else
+                                        <span class="btn btn-sm btn-success">Paid</span>
+                                    @endif
+                                </a>
+                                <a href="{{ url('/admin/user/active/'.$user->id) }}" class="">                                                                        
+                                    @if($user->is_active == 0)
+                                        <span class="btn btn-sm btn-danger">Not Active</span>
+                                    @else
+                                       <span class="btn btn-sm btn-success">Active</span>
+                                    @endif
+                                </a>
                             </td>
                         </tr>
                     @endforeach

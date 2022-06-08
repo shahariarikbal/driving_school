@@ -15,10 +15,10 @@ class FrontendController extends Controller
         return view('frontend.lessons.index');
     }
 
-    public function quiz()
+    public function topics()
     {
         $categories = Topic::orderBy('created_at', 'desc')->get();
-        return view('frontend.quiz.index', compact('categories'));
+        return view('frontend.topics.index', compact('categories'));
     }
 
     public function price()

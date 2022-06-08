@@ -53,17 +53,22 @@ class AdminController extends Controller
     public function active($id)
     {
         $user = User::find($id);
-        $user->is_active = 1;
+        if(!$user) {return redirect()->back()->with('error', 'Something went wrong.');}
+
+        $user->is_active = $user->is_active == 1 ? 0 : 1;
         $user->save();
-        return redirect()->back()->with('success', 'User package has been activated');
+        return redirect()->back()->with('success', 'User package has been updated');
     }
 
     public function paid($id)
     {
         $user = User::find($id);
-        $user->is_paid = 1;
+        if(!$user) {return redirect()->back()->with('error', 'Something went wrong.');}
+
+        $user->is_paid = $user->is_paid == 1 ? 0 : 1;
         $user->save();
-        return redirect()->back()->with('success', 'User payment has been paid');
+
+        return redirect()->back()->with('success', 'User payment has been updated');
     }
 
     public function logout(Request $request)
