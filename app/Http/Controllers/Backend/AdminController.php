@@ -53,6 +53,9 @@ class AdminController extends Controller
     public function active($id)
     {
         $user = User::find($id);
+        if ($user == null){
+            return redirect()->back()->with('error', 'User not found');
+        }
         $user->is_active = 1;
         $user->save();
         return redirect()->back()->with('success', 'User package has been activated');
@@ -61,6 +64,9 @@ class AdminController extends Controller
     public function paid($id)
     {
         $user = User::find($id);
+        if ($user == null){
+            return redirect()->back()->with('error', 'User not found');
+        }
         $user->is_paid = 1;
         $user->save();
         return redirect()->back()->with('success', 'User payment has been paid');

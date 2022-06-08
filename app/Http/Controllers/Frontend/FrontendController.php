@@ -30,6 +30,9 @@ class FrontendController extends Controller
     public function enrolled($id)
     {
         $enrolled = User::where('id', auth()->user()->id)->first();
+        if ($enrolled == null){
+            return redirect()->back()->with('error', 'Subscription not found');
+        }
         $enrolled->subscription_id = $id;
         $enrolled->save();
         return redirect('/')->with('success', 'Your subscription request has been submitted. Please wait for admin approval.');
