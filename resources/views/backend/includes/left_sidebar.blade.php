@@ -70,20 +70,37 @@
             </ul>
           </li>
 
-          {{-- brand --}}
+          {{-- question --}}
           <li class="br-menu-item">
-            <a href="#" class="br-menu-link with-sub {{ Request::is('admin/brand*') ? 'show-sub' : ''}}">
+            <a href="#" class="br-menu-link with-sub {{ Request::is('admin/question*') ? 'show-sub' : ''}}">
               <i class="menu-item-icon icon ion-help tx-24"></i>
+              {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+              <span class="menu-item-label">Question</span>
+            </a><!-- br-menu-link -->
+            <ul class="br-menu-sub" style="{{ Request::is('admin/question*') ? 'display: block;' : 'display: none;'}}">
+              <li class="sub-item">
+                <a href="{{ url('admin/question/index') }}" class="sub-link {{ Request::is('admin/question/index') ? 'active' : ''}}">Manage</a>
+              </li>
+              <li class="sub-item">
+                <a href="{{ url('admin/question/create') }}" class="sub-link {{ Request::is('admin/question/create') ? 'active' : ''}}">Add</a>
+              </li>
+            </ul>
+          </li>
+
+          {{-- faq --}}
+          <li class="br-menu-item">
+            <a href="#" class="br-menu-link with-sub {{ Request::is('admin/faq*') ? 'show-sub' : ''}}">
+              <i class="menu-item-icon icon ion-alert tx-24"></i>
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
               <span class="menu-item-label">Faq</span>
             </a><!-- br-menu-link -->
-            <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+            <ul class="br-menu-sub" style="{{ Request::is('admin/faq*') ? 'display: block;' : 'display: none;'}}">
 
               <li class="sub-item">
-                <a href="{{ url('admin/brand/index') }}" class="sub-link {{ Request::is('admin/brand/index') ? 'active' : ''}}">Manage</a>
+                <a href="{{ url('admin/faq/index') }}" class="sub-link {{ Request::is('admin/faq/index') ? 'active' : ''}}">Manage</a>
               </li>
               <li class="sub-item">
-                <a href="{{ url('admin/brand/create') }}" class="sub-link {{ Request::is('admin/brand/create') ? 'active' : ''}}">Add</a>
+                <a href="{{ url('admin/faq/create') }}" class="sub-link {{ Request::is('admin/faq/create') ? 'active' : ''}}">Add</a>
               </li>
             </ul>
           </li>

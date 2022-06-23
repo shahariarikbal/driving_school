@@ -13,6 +13,7 @@ class TopicSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement("DELETE FROM questions");
         DB::statement("DELETE FROM topics");
 
         for($i=1;$i<=9;$i++){

@@ -19,6 +19,10 @@ class CreateTopicUsersTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('total_marks');
             $table->timestamps();
+
+
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

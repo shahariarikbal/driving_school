@@ -51,6 +51,14 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/topic/update/{topic}', 'Backend\TopicController@update');
         Route::get('/topic/delete/{topic}', 'Backend\TopicController@destroy');
 
+        //============ Question manage ===============//
+        Route::get('/question/index', 'Backend\QuestionController@index');
+        Route::get('/question/create', 'Backend\QuestionController@create');
+        Route::post('/question/store', 'Backend\QuestionController@store');
+        Route::get('/question/edit/{question}', 'Backend\QuestionController@edit');
+        Route::post('/question/update/{question}', 'Backend\QuestionController@update');
+        Route::get('/question/delete/{question}', 'Backend\QuestionController@destroy');
+
 
         //============ Subscription manage ===============//
         Route::get('/subscription/index', 'Backend\SubscriptionController@index');
