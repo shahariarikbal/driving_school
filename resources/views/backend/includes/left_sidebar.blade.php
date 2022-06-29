@@ -134,19 +134,18 @@
               </ul>
           </li>
 
-          <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Settings</label>
+{{--           <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Settings</label>
           <li class="br-menu-item">
               <a href="#" class="br-menu-link with-sub {{ Request::is('admin/settings*') ? 'show-sub' : ''}}">
                   <i class="menu-item-icon icon ion-ios-cart-outline tx-24"></i>
-                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
                   <span class="menu-item-label">Settings</span>
-              </a><!-- br-menu-link -->
+              </a>
               <ul class="br-menu-sub" style="{{ Request::is('admin/order*') ? 'display: block;' : 'display: none;'}}">
                   <li class="sub-item">
                       <a href="{{ url('admin/settings/index') }}" class="sub-link {{ Request::is('admin/settings/index') ? 'active' : ''}}">Manage</a>
                   </li>
               </ul>
-          </li>
+          </li> --}}
 
       </ul><!-- br-sideleft-menu -->
       <br>
