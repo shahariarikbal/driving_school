@@ -4,7 +4,7 @@
 <style>
 
 	.title_image{
-		height: 410px;
+		/*height: 410px;*/
 	}
 
 </style>
@@ -12,7 +12,7 @@
 
 @section('content')
 	
-    <div class="content-wrapper">
+    <div class="content-wrapper">   
         <div class="breadcrumb-wrap bg-f br-4">
             <div class="overlay op-8 bg-downriver"></div>
             <div class="container">
@@ -64,11 +64,18 @@
                             <img src="https://cdn.pixabay.com/photo/2018/09/04/10/06/man-3653346_960_720.jpg" alt="Image" class="img-fluid title_image" />
 
                         </div>
+
+                        {{-- make a random topic to start simulation --}}
+
+                        @php
+                            $random_topic = App\Models\Topic::inRandomOrder()->first();
+                        @endphp
+
                         <div class="course-info">
-                            <h3><a href="{{ url('quiz') }}">Exam Simulation Center</a></h3>
+                            <h3><a href="{{ url('/quiz/by-topic/'.$random_topic->slug) }}">Exam Simulation Center</a></h3>
                             <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Eos nisi molestias, labore ex alias sequi recusandae eaque, totam. Aliquam veritatis, ab vel necessitatibus quasi dignissimos. Tempora aliquid hic beatae recusandae.</p>
 
-                            <a href="{{ url('quiz') }}" class="btn style2"> Click To Visit <i class="flaticon-right-arrow"></i> </a>
+                            <a href="{{ url('/quiz/by-topic/'.$random_topic->slug) }}" class="btn style2"> Click To Visit <i class="flaticon-right-arrow"></i> </a>
                         </div>
                     </div>
                 </div>             
@@ -93,7 +100,7 @@
                     <div class="course-card style2">
                         <div class="course-img">
 
-                            <img src="https://cdn.pixabay.com/photo/2015/03/24/12/42/woman-687560_960_720.jpg" />
+                            <img src="https://cdn.pixabay.com/photo/2015/03/24/12/42/woman-687560_960_720.jpg" class="" />
 
                         </div>
                         <div class="course-info">

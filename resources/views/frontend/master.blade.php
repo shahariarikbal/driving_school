@@ -46,7 +46,7 @@
 @include('frontend.includes.js')
 
 
-@yield('page-css')
+@yield('page-js')
 
 </body>
 

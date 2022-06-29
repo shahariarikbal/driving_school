@@ -1842,8 +1842,8 @@ select {
     pointer-events: all;
 }
 .navbar-brand img {
-	width: 200px;
-	height: 68px;
+    width: 200px;
+    height: 68px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -6408,4 +6408,60 @@ ul.dropdown-menu.user_hover_box .nav-item {
 
 ul.dropdown-menu.user_hover_box .nav-item:last-child {
     border-bottom: none;
+}
+
+
+
+/*exam page*/
+
+
+    .carousel{    /* background-color: #851518; */
+    color: white;
+    background: #f3f3f3;
+    padding: 135px 0;
+    }
+
+    .carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    }
+
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    }
+    .single_question_box {
+    }
+    .single_question_box input {
+    }
+    .single_question_box label{
+        padding-left: 5px;
+        color: #000;
+        font-size: 26px;
+        margin-right: 13px;
+        cursor: pointer;
+    }
+    .single_question_box .question{
+    font-size: 36px;
+    padding-bottom: 16px;
+    }
+    .single_question_box .instruction{
+    display: block;
+    text-align: left;
+    /* margin: 0 auto; */
+    margin-top: 19px;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 23px;
+    cursor: pointer;
+    }
+    .timer{
+    }
+    .submit{
+    display: block;
+    margin-left: auto;
+    }
+
+.answers {
+    text-align: left;
+    padding-top: 5%;
 }

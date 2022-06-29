@@ -17,8 +17,8 @@ class FrontendController extends Controller
 
     public function topics()
     {
-        $categories = Topic::orderBy('created_at', 'desc')->get();
-        return view('frontend.topics.index', compact('categories'));
+        $topics = Topic::orderBy('created_at', 'desc')->get();
+        return view('frontend.topics.index', compact('topics'));
     }
 
     public function price()

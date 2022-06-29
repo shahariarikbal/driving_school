@@ -29,6 +29,9 @@ Route::view('/', 'frontend.home.index');
 Route::get('/lessons', 'Frontend\FrontendController@lessons');
 Route::get('/topics', 'Frontend\FrontendController@topics');
 Route::view('/quiz', 'frontend.home.quiz');
+Route::view('/faq', 'frontend.home.faq');
+Route::get('/quiz/by-topic/{topic_slug}', 'Frontend\ExamController@exam');
+Route::post('quiz/submit/{topic_id}', 'Frontend\ExamController@exam_store');
 Route::get('/price/table', 'Frontend\FrontendController@price');
 Route::get('/enrolled/{id}', 'Frontend\FrontendController@enrolled');
 
@@ -58,6 +61,14 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/question/edit/{question}', 'Backend\QuestionController@edit');
         Route::post('/question/update/{question}', 'Backend\QuestionController@update');
         Route::get('/question/delete/{question}', 'Backend\QuestionController@destroy');
+
+        //============ Question manage ===============//
+        Route::get('/faq/index', 'Backend\FaqController@index');
+        Route::get('/faq/create', 'Backend\FaqController@create');
+        Route::post('/faq/store', 'Backend\FaqController@store');
+        Route::get('/faq/edit/{faq}', 'Backend\FaqController@edit');
+        Route::post('/faq/update/{faq}', 'Backend\FaqController@update');
+        Route::get('/faq/delete/{faq}', 'Backend\FaqController@destroy');
 
 
         //============ Subscription manage ===============//

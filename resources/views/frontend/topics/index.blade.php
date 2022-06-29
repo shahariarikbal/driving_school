@@ -101,16 +101,16 @@
                 </div>
             </div>
                 <div class="row justify-content-center">
-                    @foreach($categories as $category)
+                    @foreach($topics as $topic)
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="course-card style1">
                                 <div class="course-img">
-                                    <img src="{{ asset('/assets/topic/'.$category->image) }}" alt="Image" class="img-fluid cat_image" />
+                                    <img src="{{ asset('/assets/topic/'.$topic->image) }}" alt="Image" class="img-fluid cat_image" />
                                 </div>
                                 <div class="course-info">
-                                    <h3><a href="{{ url('/quiz/question/'.$category->id. '/'.$category->slug) }}">{{ $category->name }}</a></h3>
+                                    <h3><a href="{{ url('/quiz/by-topic/'.$topic->slug) }}">{{ $topic->name }}</a></h3>
                                     <div class="course-author-wrap">
-                                        <a class="course-link link style1" href="{{ url('/quiz/question/'.$category->id. '/'.$category->slug) }}"> Read More <i class="flaticon-right-arrow"></i> </a>
+                                        <a class="course-link link style1" href="{{ url('/quiz/by-topic/'.$topic->slug) }}"> Start Exam <i class="flaticon-right-arrow"></i> </a>
                                     </div>
                                 </div>
                             </div>
