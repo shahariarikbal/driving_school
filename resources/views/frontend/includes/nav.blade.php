@@ -9,17 +9,9 @@
                     <div class="col-lg-8 col-md-12">
                         <div class="header-top-left">
                             <ul class="contact-info list-style">
-                                <li><i class="flaticon-call"></i> <a href="tel:02459271449">(+024) 592 71 449</a></li>
-                                <li>
-                                    <i class="flaticon-envelope"></i>
-                                    <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#4a222f2626250a2e23303f64292527">
-                                        <span class="__cf_email__" data-cfemail="8ce4e9e0e0e3cce8e5f6f9a2efe3e1">[email&#160;protected]</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <i class="flaticon-location-1"></i>
-                                    <p>St. Here Mandalay, New York, U.K</p>
-                                </li>
+                                <li><i class="flaticon-call"></i> <a href="tel:393511014852">(+39) 351 101 4852</a></li>
+                                <li><i class="flaticon-call"></i> <a href="tel:3889965593">(+39) 388 996 5593</a></li>
+                                <li><i class="flaticon-call"></i> <a href="tel:0645478893">(+39) 06 4547 8893</a></li>
                             </ul>
                         </div>
                     </div>
@@ -27,23 +19,8 @@
                         <div class="header-top-right">
                             <ul class="social-profile list-style style2">
                                 <li>
-                                    <a target="_blank" href="https://facebook.com/">
-                                        <i class="ri-facebook-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://linkedin.com/">
-                                        <i class="ri-linkedin-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/">
-                                        <i class="ri-twitter-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://pinterest.com/">
-                                        <i class="ri-pinterest-fill"></i>
+                                    <a target="_blank" href="https://youtube.com/">
+                                        <i class="ri-youtube-fill"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -55,16 +32,13 @@
                                     </button>
                                     <div class="dropdown-menu language-dropdown-menu">
                                         <a class="dropdown-item" href="#">
-                                            <img src="{{asset('/frontend/')}}/assets/img/uk.png" alt="flag" />
-                                            English
+                                            <img src="https://cdn-icons-png.flaticon.com/512/323/323325.png" alt="flag" />
+                                            Italiano
                                         </a>
                                         <a class="dropdown-item" href="#">
-                                            <img src="{{asset('/frontend/')}}/assets/img/china.png" alt="flag" />
-                                            简体中文
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <img src="{{asset('/frontend/')}}/assets/img/uae.png" alt="flag" />
-                                            العربيّة
+                                            {{-- <img src="{{asset('/frontend/')}}/assets/img/uk.png" alt="flag" /> --}}
+                                            <img src="https://cdn-icons-png.flaticon.com/512/323/323299.png" alt="flag" />
+                                            Bangla
                                         </a>
                                     </div>
                                 </div>
@@ -93,17 +67,22 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('/quiz') }}" class="nav-link {{ Request::url() == url('/quiz') ? 'active' : '' }}">
-                                    Simulation Center
+                                    Simulazione Esame 
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('/topics') }}" class="nav-link {{ Request::url() == url('/topics') ? 'active' : '' }}">
-                                    Quiz By Topics
+                                    Esame su Capitolo
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('/quiz') }}" class="nav-link {{ Request::url() == url('/topics') ? 'active' : '' }}">
+                                    Esame su Argumento
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('lessons') }}" class="nav-link {{ Request::url() == url('lessons') ? 'active' : '' }}">
-                                    Lessons
+                                    Lezioni
                                 </a>
                             </li>
                             <li class="nav-item">

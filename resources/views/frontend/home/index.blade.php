@@ -16,7 +16,7 @@
                 <div class="col-lg-6 col-md-11">
                     <div class="hero-content">
                         <h1 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" class="home-text-inner">
-                            <span>LEARN DRIVING</span> in just 10 Days !
+                            <span>৩ মাসে</span> হাতে পাতেন্তে !
                         </h1>
                     </div>
                 </div>
