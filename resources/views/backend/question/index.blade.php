@@ -44,7 +44,7 @@
                             <td>{{ $question->answer == 0 ? 'True' : 'False' }}</td>
                             <td>{{ $question->explanation ?? 'No  explanation found' }}</td>
                             <td>{{ $question->marks ?? 'No  marks found' }}</td>
-                            <td>{{ $faq->is_active == 0 ? 'Inactive' : 'Active' }}</td>
+                            <td>{{ $question->is_active == 0 ? 'Inactive' : 'Active' }}</td>
                             <td>
                                 <a href="{{ url('/admin/question/edit/'.$question->id) }}" class="btn btn-sm btn-info">Edit</a>
                                 <a href="{{ url('/admin/question/delete/'.$question->id) }}" onclick="return confirm('Are you sure permanently this question ?')" class="btn btn-sm btn-danger">Delete</a>
